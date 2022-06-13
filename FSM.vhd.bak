@@ -1,0 +1,15 @@
+library library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity FSM is
+	port();
+end FSM;
+
+architecture Behavioral of FSM is
+
+constant water_in : std_logic_vector(6 downto 0):= "0010010";	--5s
+constant rinse : std_logic_vector(6 downto 0):="0010000";		--9s
+constant water_out : std_logic_vector(6 downto 0):="0100100";	--2s
+constant spin : std_logic_vector(6 downto 0):="0011001";			--4s
+end Behavioral;

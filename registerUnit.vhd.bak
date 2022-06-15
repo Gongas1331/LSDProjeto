@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity register is
+entity registerUnit is
     port(
         clk : in std_logic;
         p1_in : in std_logic;
@@ -15,11 +15,10 @@ entity register is
         p3_out : out std_logic;
 		  reset_out : out std_logic;
 		  startstop_out : out std_logic;
-        )
+        );
 end register;
 architecture Behavioral of Register is
 	signal ison : std_logic:='0';
-	signal ss : std_logic;
     begin
         process(clk)
         begin

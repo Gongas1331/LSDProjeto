@@ -17,7 +17,7 @@ entity register is
 		  startstop_out : out std_logic;
         )
 end register;
-architecture Behav of Register is
+architecture Behavioral of Register is
 	signal ison : std_logic:='0';
 	signal ss : std_logic;
     begin
@@ -52,4 +52,4 @@ architecture Behav of Register is
             refClk    => clk,
             dirtyIn   => startstop_in,
             pulsedOut => startstop_out);
-    end Behav;
+    end Behavioral;

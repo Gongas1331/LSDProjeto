@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MaqLavar
-Tue Jun 14 17:11:03 2022
+Fri Jun 17 00:17:20 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,7 +10,19 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: registerUnit:registerBlock|DebounceUnit:debounceReset
+ 10. Parameter Settings for User Entity Instance: registerUnit:registerBlock|DebounceUnit:debounceStartStop
+ 11. Parameter Settings for User Entity Instance: PulseGen:pulseGenUnit
+ 12. Port Connectivity Checks: "display:displayUnit"
+ 13. Port Connectivity Checks: "PulseGen:pulseGenUnit"
+ 14. Port Connectivity Checks: "registerUnit:registerBlock"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -37,20 +49,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue Jun 14 17:11:03 2022           ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun 17 00:17:20 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; MaqLavar                                    ;
-; Top-level Entity Name              ; FSM                                         ;
+; Top-level Entity Name              ; MaqLavar                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 47                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -60,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; FSM                ; MaqLavar           ;
+; Top-level entity name                                            ; MaqLavar           ; MaqLavar           ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -156,31 +168,279 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                            ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------+---------+
+; DebounceUnit.vhd                 ; yes             ; User VHDL File  ; C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/DebounceUnit.vhd ;         ;
+; Display.vhd                      ; yes             ; User VHDL File  ; C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Display.vhd      ;         ;
+; MaqLavar.vhd                     ; yes             ; User VHDL File  ; C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd     ;         ;
+; bcd7seg.vhd                      ; yes             ; User VHDL File  ; C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/bcd7seg.vhd      ;         ;
+; registerUnit.vhd                 ; yes             ; User VHDL File  ; C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/registerUnit.vhd ;         ;
+; PulseGen.vhd                     ; yes             ; User VHDL File  ; C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/PulseGen.vhd     ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+;                                             ;        ;
+; Total combinational functions               ; 0      ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 0      ;
+;     -- 3 input functions                    ; 0      ;
+;     -- <=2 input functions                  ; 0      ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 0      ;
+;     -- arithmetic mode                      ; 0      ;
+;                                             ;        ;
+; Total registers                             ; 0      ;
+;     -- Dedicated logic registers            ; 0      ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 47     ;
+;                                             ;        ;
+; Embedded Multiplier 9-bit elements          ; 0      ;
+;                                             ;        ;
+; Maximum fan-out node                        ; CLK_50 ;
+; Maximum fan-out                             ; 1      ;
+; Total fan-out                               ; 47     ;
+; Average fan-out                             ; 0.50   ;
++---------------------------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |MaqLavar                  ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 47   ; 0            ; |MaqLavar           ; MaqLavar    ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerUnit:registerBlock|DebounceUnit:debounceReset ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; khzclkfreq     ; 50000 ; Signed Integer                                                            ;
+; msecmininwidth ; 100   ; Signed Integer                                                            ;
+; inpolarity     ; '0'   ; Enumerated                                                                ;
+; outpolarity    ; '1'   ; Enumerated                                                                ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerUnit:registerBlock|DebounceUnit:debounceStartStop ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; khzclkfreq     ; 50000 ; Signed Integer                                                                ;
+; msecmininwidth ; 100   ; Signed Integer                                                                ;
+; inpolarity     ; '0'   ; Enumerated                                                                    ;
+; outpolarity    ; '1'   ; Enumerated                                                                    ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PulseGen:pulseGenUnit ;
++----------------+----------+----------------------------------------+
+; Parameter Name ; Value    ; Type                                   ;
++----------------+----------+----------------------------------------+
+; n              ; 50000000 ; Signed Integer                         ;
++----------------+----------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "display:displayUnit" ;
++--------+-------+----------+---------------------+
+; Port   ; Type  ; Severity ; Details             ;
++--------+-------+----------+---------------------+
+; timeen ; Input ; Info     ; Stuck at GND        ;
++--------+-------+----------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PulseGen:pulseGenUnit"                                                               ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registerUnit:registerBlock"                                                                  ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; door_out      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; p1_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; p2_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; p3_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; startstop_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 47                          ;
+; cycloneiii_lcell_comb ; 2                           ;
+;     normal            ; 2                           ;
+;         0 data inputs ; 2                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Jun 14 17:10:55 2022
+    Info: Processing started: Fri Jun 17 00:17:13 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MaqLavar -c MaqLavar
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Error (10500): VHDL syntax error at Register.vhd(5) near text "register";  expecting an identifier File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Register.vhd Line: 5
-Error (10500): VHDL syntax error at Register.vhd(16) near text "Register";  expecting an identifier File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Register.vhd Line: 16
-Error (10995): VHDL error at Register.vhd(26): block comments are not supported in VHDL_1993 File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Register.vhd Line: 26
-Info (12021): Found 0 design units, including 0 entities, in source file register.vhd
-Error (10500): VHDL syntax error at FSM.vhd(1) near text "library";  expecting an identifier File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 1
-Error (10500): VHDL syntax error at FSM.vhd(12) near text ")";  expecting an identifier, or "constant", or "file", or "signal", or "variable" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 12
-Error (10500): VHDL syntax error at FSM.vhd(26) near text "begin";  expecting an identifier ("begin" is a reserved keyword), or "constant", or "file", or "signal", or "variable" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 26
-Info (12021): Found 0 design units, including 0 entities, in source file fsm.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file fsm.vhd
+    Info (12022): Found design unit 1: FSM-Behavioral File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 26
+    Info (12023): Found entity 1: FSM File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file debounceunit.vhd
     Info (12022): Found design unit 1: DebounceUnit-Behavioral File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/DebounceUnit.vhd Line: 16
     Info (12023): Found entity 1: DebounceUnit File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/DebounceUnit.vhd Line: 5
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 6 errors, 1 warning
-    Error: Peak virtual memory: 4777 megabytes
-    Error: Processing ended: Tue Jun 14 17:11:03 2022
-    Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:19
+Info (12021): Found 2 design units, including 1 entities, in source file display.vhd
+    Info (12022): Found design unit 1: display-Behavioral File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Display.vhd Line: 17
+    Info (12023): Found entity 1: display File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Display.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file timer.vhd
+    Info (12022): Found design unit 1: Timer-Behavioral File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Timer.vhd Line: 15
+    Info (12023): Found entity 1: Timer File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Timer.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file clkdividern.vhd
+    Info (12022): Found design unit 1: ClkDividerN-rtl File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/ClkDividerN.vhd Line: 11
+    Info (12023): Found entity 1: ClkDividerN File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/ClkDividerN.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file maqlavar.vhd
+    Info (12022): Found design unit 1: MaqLavar-Shell File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 19
+    Info (12023): Found entity 1: MaqLavar File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bcd7seg.vhd
+    Info (12022): Found design unit 1: bcd7seg-Behavioral File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/bcd7seg.vhd Line: 9
+    Info (12023): Found entity 1: bcd7seg File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/bcd7seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file registerunit.vhd
+    Info (12022): Found design unit 1: registerUnit-Behavioral File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/registerUnit.vhd Line: 20
+    Info (12023): Found entity 1: registerUnit File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/registerUnit.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file pulsegen.vhd
+    Info (12022): Found design unit 1: PulseGen-Behavioral File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/PulseGen.vhd Line: 12
+    Info (12023): Found entity 1: PulseGen File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/PulseGen.vhd Line: 5
+Info (12127): Elaborating entity "MaqLavar" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at MaqLavar.vhd(9): used implicit default value for signal "LEDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 9
+Warning (10541): VHDL Signal Declaration warning at MaqLavar.vhd(10): used implicit default value for signal "LEDG" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 10
+Warning (10036): Verilog HDL or VHDL warning at MaqLavar.vhd(21): object "s_startstop" assigned a value but never read File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 21
+Warning (10036): Verilog HDL or VHDL warning at MaqLavar.vhd(21): object "s_p1" assigned a value but never read File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 21
+Warning (10036): Verilog HDL or VHDL warning at MaqLavar.vhd(21): object "s_p2" assigned a value but never read File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 21
+Warning (10036): Verilog HDL or VHDL warning at MaqLavar.vhd(21): object "s_p3" assigned a value but never read File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 21
+Warning (10036): Verilog HDL or VHDL warning at MaqLavar.vhd(21): object "s_door" assigned a value but never read File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 21
+Warning (10541): VHDL Signal Declaration warning at MaqLavar.vhd(21): used implicit default value for signal "s_timeEn" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 21
+Warning (10541): VHDL Signal Declaration warning at MaqLavar.vhd(22): used implicit default value for signal "s_prog" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 22
+Warning (10541): VHDL Signal Declaration warning at MaqLavar.vhd(23): used implicit default value for signal "s_timeReal" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 23
+Info (12129): Elaborating entity "registerUnit" using architecture "A:behavioral" for hierarchy "registerUnit:registerBlock" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 26
+Info (12129): Elaborating entity "DebounceUnit" using architecture "A:behavioral" for hierarchy "registerUnit:registerBlock|DebounceUnit:debounceReset" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/registerUnit.vhd Line: 33
+Info (12129): Elaborating entity "PulseGen" using architecture "A:behavioral" for hierarchy "PulseGen:pulseGenUnit" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 42
+Info (12129): Elaborating entity "display" using architecture "A:behavioral" for hierarchy "display:displayUnit" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 50
+Warning (10541): VHDL Signal Declaration warning at Display.vhd(12): used implicit default value for signal "pDisplay" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Display.vhd Line: 12
+Info (12129): Elaborating entity "bcd7seg" using architecture "A:behavioral" for hierarchy "display:displayUnit|bcd7seg:bcd7segProgram" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Display.vhd Line: 31
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 9
+    Warning (13410): Pin "LEDG[0]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 10
+    Warning (13410): Pin "LEDG[1]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 10
+    Warning (13410): Pin "LEDG[2]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 10
+    Warning (13410): Pin "LEDG[3]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 10
+    Warning (13410): Pin "HEX0[0]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 11
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 11
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 11
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 11
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 11
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 11
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 11
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 12
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 12
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 12
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 12
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 12
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 12
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 12
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 13
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 13
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 13
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 13
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 13
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 13
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 13
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 14
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 14
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 14
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 14
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 14
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 14
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 14
+    Warning (13410): Pin "HEX6[0]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 15
+    Warning (13410): Pin "HEX6[1]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 15
+    Warning (13410): Pin "HEX6[2]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 15
+    Warning (13410): Pin "HEX6[3]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 15
+    Warning (13410): Pin "HEX6[4]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 15
+    Warning (13410): Pin "HEX6[5]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 15
+    Warning (13410): Pin "HEX6[6]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 15
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 7 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLK_50" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 6
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 7
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 7
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 8
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 8
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 8
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 8
+Info (21057): Implemented 47 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 40 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 61 warnings
+    Info: Peak virtual memory: 4785 megabytes
+    Info: Processing ended: Fri Jun 17 00:17:20 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:17
 
 

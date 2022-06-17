@@ -5,21 +5,28 @@ use IEEE.numeric_std.all;
 entity display is
 	port(	timeReal 	: in std_logic_vector(7 downto 0);
 			timeEn		: in std_logic;
-			enDisplay 	: out std_logic(6 downto 0); -- displays = if the program is paused, assign to hex2
-			program 		: in std_logic_vector(3 downto 0); -- current program
-			leftDigit	: out std_logic_vector(6 downto 0); -- assign to hex
-			rightDigit	: out std_logic_vector(6 downto 0);
-			pDisplay 	: out std_logic_vector(6 downto 0):= "0001100"; --displays P, assign to hex1
-			pnDisplay 	: out std_logic_vector(6 downto 0);); --displays the program number, asign to hex0
+			enDisplay 	: out std_logic_vector(6 downto 0); 	-- displays = if the program is paused, assign to hex6
+			program 		: in std_logic_vector(3 downto 0); 		-- current program
+			leftDigit	: out std_logic_vector(6 downto 0); 	-- assign to hex5
+			rightDigit	: out std_logic_vector(6 downto 0); 	-- assign to hex4
+			pDisplay 	: out std_logic_vector(6 downto 0); 	--displays P, assign to hex1
+			pnDisplay 	: out std_logic_vector(6 downto 0)); 	--displays the program number, asign to hex0
 			
 end display;
 
 architecture Behavioral of display is
+
+signal p : std_logic_vector(6 downto 0) := "0001100";
+
 begin
+	process(timeEn)
+	begin
 		if (timeEn='0') then
 			enDisplay <= "0110111";
 		else
-			enDisplay <= "11111111";
+			enDisplay <= "1111111";
+		end if;
+	end process;
 
 	bcd7segProgram : entity work.bcd7seg(Behavioral)
 			port map(

@@ -1,0 +1,43 @@
+%
+% file used to test word hyphenation
+%
+% latex words | grep "\[\]" | cut -b 19-
+%
+% please send corrections to <tos@ua.pt>
+%
+
+\documentclass{article}
+\usepackage{portugal}
+
+\begin{document}
+
+\lefthyphenmin=1
+\righthyphenmin=1
+
+\showhyphens{abjecto}        % ab-jec-to
+\showhyphens{adoptado}       % a-dop-ta-do
+\showhyphens{algoritmo}      % al-go-rit-mo
+\showhyphens{aproximações}   % a-pro-xi-ma-ções
+\showhyphens{assímptota}     % as-símp-to-ta
+\showhyphens{cablado}        % ca-bla-do           ???
+\showhyphens{constatar}      % cons-ta-tar
+\showhyphens{correspondente} % cor-res-pon-den-te
+\showhyphens{designadamente} % de-sig-na-da-men-te
+\showhyphens{diagnóstico}    % di-ag-nós-ti-co
+\showhyphens{exactamente}    % e-xac-ta-men-te
+\showhyphens{felizmente}     % fe-liz-men-te
+\showhyphens{formar}         % for-mar
+\showhyphens{helicóptero}    % he-li-cóp-te-ro
+\showhyphens{impulsional}    % im-pul-si-o-nal
+\showhyphens{insubstituível} % in-subs-ti-tu-í-vel
+\showhyphens{logarítmico}    % lo-ga-rít-mi-co
+\showhyphens{mnemónica}      % mne-mó-ni-ca
+\showhyphens{oblongo}        % ob-lon-go
+\showhyphens{omoplata}       % o-mo-pla-ta         ???
+\showhyphens{pneumático}     % pneu-má-ti-co
+\showhyphens{problema}       % pro-ble-ma
+\showhyphens{psicadélico}    % psi-ca-dé-li-co
+\showhyphens{subsecção}      % sub-sec-ção
+\showhyphens{pretendendo_se} % pre-ten-den-do--se
+
+\end{document}

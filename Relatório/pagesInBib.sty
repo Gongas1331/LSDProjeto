@@ -1,0 +1,82 @@
+%
+% Add to the bibliography the page(s) where each entry was cited
+%
+\ProvidesPackage{pagesInBib}[1996/05/12 v1.0 Pages in bibliography]
+\newcounter{pib@option}
+\setcounter{pib@option}{0}
+\DeclareOption{standard}{\setcounter{pib@option}{0}}
+\DeclareOption{harvard}{\setcounter{pib@option}{1}}
+\ProcessOptions
+
+\ifcase\value{pib@option}%
+  % Standard citation macros
+  \def\@citex[#1]#2{%From latex.ltx
+    \let\@citea\@empty
+    \@cite{\@for\@citeb:=#2\do
+      {\@citea\def\@citea{,\penalty\@m\ }%
+       \edef\@citeb{\expandafter\@firstofone\@citeb}%
+       \if@filesw\immediate\write\@auxout{\string\citation{\@citeb}}\fi
+       \pib@label{\@citeb}%New
+       \@ifundefined{b@\@citeb}{\mbox{\reset@font\bfseries ?}%
+         \G@refundefinedtrue
+         \@latex@warning
+           {Citation `\@citeb' on page \thepage \space undefined}}%
+         {\hbox{\csname b@\@citeb\endcsname}}}}{#1}}
+  \let\pib@item=\bibitem
+  \def\pib@itemII#1#2\par{\pib@item{#1}#2\pib@output{#1}\par}
+  \def\pib@itemIII[#1]#2#3\par{\pib@item[#1]{#2}#3\pib@output{#2}\par}
+  \def\bibitem{\@ifnextchar[{\pib@itemIII}{\pib@itemII}}%]
+\or
+  % Harvard citation macros
+  \renewcommand{\HAR@checkdef}[2]{\pib@label{#1}%New
+    \@ifundefined{HAR@df@#1}%Old definition
+      {\textbf{?}\@warning{Citation '#1' on page \thepage\space undefined}}%
+      {#2}}
+  \let\pib@item=\harvarditem
+  \def\pib@itemIV#1#2#3#4\par{\pib@item{#1}{#2}{#3}#4\pib@output{#3}\par}
+  \def\pib@itemV[#1]#2#3#4#5\par{\pib@item[#1]{#2}{#3}{#4}#5\pib@output{#4}\par}
+  \def\harvarditem{\@ifnextchar[{\pib@itemV}{\pib@itemIV}}%]
+\fi
+%
+% Adapted from \label in latex.ltx
+%
+\def\pib@label#1{\@bsphack
+  \protected@write\@auxout{}%
+         {\string\piblabel{#1}{\thepage}}%
+  \@esphack}
+%
+% General macros
+%
+\def\piblabel#1#2{
+  \edef\pib@cmd{\csname #1@r\endcsname}\def\pib@page{#2}%
+  \@ifundefined{#1@r}%
+    {\edef\pib@second{\pib@page}}%
+    {\edef\pib@first{\expandafter\pib@get@first\pib@cmd\par}%
+      \edef\pib@second{\expandafter\pib@get@second\pib@cmd\par}%
+      \ifx\pib@page\pib@first\else
+        \edef\pib@second{\pib@second, \pib@page}%
+      \fi
+    }%
+  \expandafter\xdef\csname #1@r\endcsname{\pib@page:\pib@second}%
+}
+\def\pib@get@first#1:#2\par{#1}
+\def\pib@get@second#1:#2\par{#2}
+\def\pib@pages#1{\@ifundefined{#1@r}%
+                     {-}%
+                     {\edef\pib@cmd{\csname #1@r\endcsname}%
+                       \expandafter\pib@get@second\pib@cmd\par}}
+%
+% Output page numbers (can be redefined)
+%
+\def\pib@output#1{\newblock $^{\{\pib@pages{#1}\}}$}
+
+\endinput
+
+This package adds to the end of each bibliographic entry the list of pages
+where it was cited. It should to be used as follows:
+  \usepackage{pagesInBib}
+An option allows the package to work with the harvard package:
+  \usepackage{harvard}
+  \usepackage[harvard]{pagesInBib}
+It necessary, the user can change the way the list of pages is typeset. This
+requires changing the macro \pib@output, and, possibly, the macro \pib@pages.

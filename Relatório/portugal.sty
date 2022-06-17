@@ -1,0 +1,65 @@
+%
+% portugal.sty
+%
+% Tomás Oliveira e Silva  <tos@ua.pt>  (1996/11/14)
+%
+% Used to typeset a document in portuguese. Words with accents are also
+% hyphenated. Use _ instead of - to put an hyphen in a word (dir_te_ei
+% instead of dir-te-ei). The underscore retains its normal operation in
+% math mode. Unfortunately, this facility forbids the use of underscores
+% in labels.
+%
+% Please report any problems to <tos@ua.pt>.
+%
+% Assumes that the pthyph-t1.tex portuguese hyphenation table was
+% incorporated in the LaTeX2e format file.
+%
+\ProvidesPackage{portugal}[1996/10/27 v0.3 Portuguese hyphenation made easy]
+
+
+%
+% Must use the T1 font encoding. (Warning: the dc fonts will be used.)
+% This may be omitted in future releases of this package.
+%
+\let\lguill\guillemotleft
+\let\rguill\guillemotright
+\usepackage[T1]{fontenc}
+
+
+%
+% Must use the babel package (we definitely want this).
+% This may be omitted in future releases of this package. If that happens,
+% the babel package will have to be loaded before this one. (If the macros
+% defined here are, some day, incorporated in the babel package, this
+% package becomes obsolete).
+%
+% Please note that we always change the files, with the exception of dvi
+% files) of the TeX distribution tree that contain the pattern ortuges
+% either in their name or in their contents; we replace ortuges by
+% ortugues (the spelling mistake portuges is unexcusable).
+%
+\ifx\undefined\captionsportuguese
+  \usepackage[english,portuguese]{babel}
+  \selectlanguage{portuguese}
+\fi
+
+
+%
+% The isolatin1 package is optional (but we load it anyway).
+%
+\usepackage{isolatin1}
+
+
+%
+% Redefine the underscore to be a (portuguese) hyphen outside of math mode.
+% Underscores were forbiden outside of math mode (not entirely true...) so
+% our trick shouldn't mess things up (except in labels...). We must make _
+% a robust command (we cannot use \DeclareRobustCommand directly).
+%
+\DeclareRobustCommand{\pt@hyphen}{\ifmmode_\else
+  \nobreak\hskip\z@skip\discretionary{-}{-}{-}\nobreak\hskip\z@skip\fi}
+\catcode`_=\active
+\let_=\pt@hyphen
+
+
+\endinput

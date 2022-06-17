@@ -33,7 +33,7 @@ signal cycle, finish, running, ison : std_logic:= '0';
 signal diffSt		: std_logic := '1';								--indicates if the state has changed
 signal s_timeVal : std_logic_vector(7 downto 0):= "11111111";				--signal for timeVal, if machine is idle
 
---time for each task
+--time for each task (BCD)
 
 constant wInTime 	: std_logic_vector(7 downto 0):= "00000101";	--5s
 constant rnsTime	: std_logic_vector(7 downto 0):=	"00001001";	--9s
@@ -41,7 +41,8 @@ constant wOutTime : std_logic_vector(7 downto 0):=	"00000010";	--2s
 constant spnTime 	: std_logic_vector(7 downto 0):=	"00000100";	--4s
 constant offTime 	: std_logic_vector(7 downto 0):=	"00000010";	--2s
 
---total time for the different programs
+--total time for the different programs (BCD)
+
 constant ptime 	: std_logic_vector(7 downto 0):= "11111111";		--display off
 constant p1time 	: std_logic_vector(7 downto 0):= "00111000"; 	--38s
 constant p2time 	: std_logic_vector(7 downto 0):= "00100010"; 	--22s
@@ -56,7 +57,9 @@ begin
 				diffSt <= '1';
 				running <= '0';
 			else
-				if (pSt /= nSt) then
+			--if(ststp = '1') then (possivel?)
+				--running <= not running;
+				if (pSt /= nSt or pSt = idle) then
 					diffSt <= '1';
 				else
 					diffSt <= '0';
@@ -70,7 +73,6 @@ begin
 	begin
 		case (pSt) is
 		when idle =>
-			newTime		<= '1';
 			s_timeVal	<= ptime;
 			ison			<= '0';
 			waterValve	<= '0';

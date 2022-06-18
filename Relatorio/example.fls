@@ -1,8 +1,8 @@
-PWD c:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Relatório
+PWD c:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Relatorio
 INPUT c:/texlive/2022/texmf.cnf
 INPUT c:/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Relatório/example.tex
+INPUT c:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Relatorio/example.tex
 OUTPUT example.log
 INPUT c:/texlive/2022/texmf-dist/tex/latex/base/report.cls
 INPUT c:/texlive/2022/texmf-dist/tex/latex/base/report.cls

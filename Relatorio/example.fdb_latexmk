@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1655559688 "c:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Relatório/example.tex" "example.pdf" "example" 1655559688
-  "c:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Relatório/example.tex" 1655559682 22343 844f4da70b634faf6e848d691ae177ed ""
+["pdflatex"] 1655570321 "c:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Relatorio/example.tex" "example.pdf" "example" 1655570321
+  "c:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Relatorio/example.tex" 1655570316 22351 7c0471ca5707836f0c16591f9982f38d ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1655330341 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1655330965 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1655330701 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -123,11 +123,11 @@
   "c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1655334806 4628057 1230c9ff463314e58cdc6fb8d990e1df ""
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1655334990 2864029 6f4331757f9e8b82556bd719d4107073 ""
   "c:/texlive/2022/texmf.cnf" 1655334754 895 2f825eac01183bad76b59eb1f2336089 ""
-  "example.aux" 1655559688 34 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "example.aux" 1655570321 34 3985256e7290058c681f74d7a3565a19 "pdflatex"
   "example.lof" 0 -1 0 "pdflatex"
   "example.lot" 0 -1 0 "pdflatex"
   "example.out" 0 -1 0 "pdflatex"
-  "example.tex" 1655559682 22343 844f4da70b634faf6e848d691ae177ed ""
+  "example.tex" 1655570316 22351 7c0471ca5707836f0c16591f9982f38d ""
   "example.toc" 0 -1 0 "pdflatex"
   "example_fig.eps" 1337531062 10339 b0cce6026e3c9d217ab5e9368ef0d8fb ""
   "uaLogoNew.pdf" 1242666505 2911 e3fb8f77330f913af87495e8c6b0dc02 ""

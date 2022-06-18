@@ -25,7 +25,7 @@ begin
 				s_counter <= (others => '1');
 				s_cntZero <= '0';
 			elsif (newTime = '1') then
-					s_counter <= unsigned(timeVal) - 1;
+					s_counter <= unsigned(timeVal);
 					s_cntZero <= '0';
 			else
 				if (timeEn = '1') then

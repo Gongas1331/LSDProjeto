@@ -3,11 +3,11 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 entity MaqLavar is
-	port(	CLK_50 	: in std_logic;
+	port(	CLOCK_50 	: in std_logic;
 			KEY		: in std_logic_vector(1 downto 0);
 			SW			: in std_logic_vector(3 downto 0);
-			LEDR		: out std_logic_vector(0 downto 0);
-			LEDG		: out std_logic_vector(3 downto 0);
+			LEDR		: out std_logic_vector(1 downto 0);
+			LEDG		: out std_logic_vector(7 downto 0);
 			HEX0		: out std_logic_vector(6 downto 0);
 			HEX1		: out std_logic_vector(6 downto 0);
 			HEX4		: out std_logic_vector(6 downto 0);
@@ -18,14 +18,28 @@ end MaqLavar;
 
 architecture Shell of MaqLavar is
 
-signal	s_startstop, s_reset, s_pulse, s_p1, s_p2, s_p3, s_door, s_timeEn : std_logic;
+signal	s_startstop, s_reset, s_pulse, s_p1, s_p2, s_p3, s_door, s_timeEn, s_running, s_timeExp, s_newTime: std_logic;
 signal	s_prog 		: std_logic_vector(3 downto 0);
-signal	s_timeReal 	: std_logic_vector(7 downto 0);
+signal	s_timeReal, s_timeVal 	: std_logic_vector(7 downto 0);
 
 begin
+
+	process(CLOCK_50, s_startstop, s_running)
+	begin
+		if(rising_edge(CLOCK_50)) then
+			if (s_reset = '1') then
+				s_running <= '0';
+			elsif (s_startstop = '1') then
+				s_running <= not s_running;
+			end if;
+			LEDR(1) <= s_running;
+		end if;
+
+	end process;
+	
 	registerBlock	: entity work.registerUnit(Behavioral)
 		port map(
-			clk				=> CLK_50,
+			clk				=> CLOCK_50,
 			door_in			=> SW(0),
 			p1_in				=> SW(1),
 			p2_in				=> SW(2),
@@ -38,19 +52,50 @@ begin
 			p3_out			=> s_p3,
 			reset_out		=> s_reset,
 			startstop_out	=> s_startstop);
+			
+	FSMUnit			: entity work.FSM(Behavioral)
+		port map(
+			clk			=> CLOCK_50,
+			running		=> s_running,
+			p1				=> s_p1,
+			p2				=> s_p2,
+			p3				=> s_p3,
+			reset			=> s_reset,
+			timeExp		=> s_timeExp,
+			door			=> s_door,
+			program		=> s_prog,
+			newTime		=> s_newTime,
+			timeVal		=> s_timeVal,
+			timeEn		=> s_timeEn,
+			waterValve	=> LEDG(0),
+			rinse			=> LEDG(1),
+			waterPump	=> LEDG(2),
+			spin			=> LEDG(3),
+			ledOn			=> LEDR(0),
+			doorLed		=> LEDG(7));
+			
+	timerAux			: entity work.Timer(Behavioral)
+		port map(
+			reset		=> s_reset,
+			clk		=> CLOCK_50,
+			timeEn	=> s_pulse and s_timeEn,
+			newTime	=> s_newTime,
+			timeVal	=> s_timeVal,
+			timeExp	=> s_timeExp,
+			timeReal	=> s_timeReal);
 		
 	pulseGenUnit	: entity work.PulseGen(Behavioral)
 		generic map(
 			N => 50000000)
 		port map(
-			clk	=> CLK_50,
+			clk	=> CLOCK_50,
 			reset	=> s_reset,
 			pulse	=> s_pulse);
 		
 	displayUnit 	: entity work.Display(Behavioral)
 		port map(
 			timeReal		=>	s_timeReal,
-			timeEn		=>	s_pulse and s_timeEn,
+			timeEn		=>	s_timeEn,
 			enDisplay	=>	HEX6,
 			program 		=>	s_prog,
 			leftDigit	=> HEX5,
@@ -58,4 +103,5 @@ begin
 			pDisplay 	=>	HEX1,
 			pnDisplay	=> HEX0);
 			
+	LEDG(6 downto 4) <= "000";
 end Shell;

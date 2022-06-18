@@ -16,15 +16,13 @@ end display;
 
 architecture Behavioral of display is
 
-signal p : std_logic_vector(6 downto 0) := "0001100";
-
 begin
 	process(timeEn)
 	begin
-		if (timeEn='0') then
-			enDisplay <= "0110111";
-		else
+		if (timeEn='1') then
 			enDisplay <= "1111111";
+		else
+			enDisplay <= "0110111";
 		end if;
 	end process;
 
@@ -42,5 +40,7 @@ begin
 			port map(
 				bcd => timeReal(3 downto 0),
 				seg7 => rightDigit);
+	
+	pDisplay <= "0001100";
 
 end Behavioral;

@@ -16,7 +16,14 @@ end display;
 
 architecture Behavioral of display is
 
+signal s_ten, s_unit : std_logic_vector(3 downto 0);
+
 begin
+	bin2bcdTime		: entity work.bin2bcd(Behavioral)
+			port map(
+				bin 	=> timeReal(5 downto 0),
+				ten 	=> s_ten,
+				unit 	=> s_unit);
 	
 	bcd7segEqual	: entity work.bcd7seg(Behavioral)
 			port map(
@@ -30,12 +37,12 @@ begin
 				
 	bcd7segTimeL: entity work.bcd7seg(Behavioral)
 			port map(
-				bcd => timeReal(7 downto 4),
+				bcd => s_ten,
 				seg7 => leftDigit);
 	
 	bcd7segTimeR: entity work.bcd7seg(Behavioral)
 			port map(
-				bcd => timeReal(3 downto 0),
+				bcd => s_unit,
 				seg7 => rightDigit);
 	
 	pDisplay <= "0001100";

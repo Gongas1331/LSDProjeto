@@ -34,6 +34,8 @@ case bcd is
 		seg7 <= "0000000"; --8
 	when "1001" =>
 		seg7 <= "0010000"; --9
+	when "1011" =>
+		seg7 <= "0110111"; --=
 	when others =>
 		seg7 <= "1111111"; --null
 	end case;

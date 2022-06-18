@@ -1,9 +1,9 @@
 
-State Machine - |MaqLavar|FSM:FSMUnit|pSt
-Name pSt.off pSt.spn pSt.wOut pSt.rns pSt.wIn pSt.idle 
-pSt.idle 0 0 0 0 0 0 
-pSt.wIn 0 0 0 0 1 1 
-pSt.rns 0 0 0 1 0 1 
-pSt.wOut 0 0 1 0 0 1 
-pSt.spn 0 1 0 0 0 1 
-pSt.off 1 0 0 0 0 1 
+State Machine - |MaqLavar|FSM:FSMUnit|pState
+Name pState.off pState.spn pState.wOut pState.rns pState.wIn pState.idle 
+pState.idle 0 0 0 0 0 0 
+pState.wIn 0 0 0 0 1 1 
+pState.rns 0 0 0 1 0 1 
+pState.wOut 0 0 1 0 0 1 
+pState.spn 0 1 0 0 0 1 
+pState.off 1 0 0 0 0 1 

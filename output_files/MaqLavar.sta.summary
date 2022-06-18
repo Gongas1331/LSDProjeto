@@ -2,184 +2,148 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'registerUnit:registerBlock|door_out'
-Slack : -5.546
-TNS   : -28.616
+Type  : Slow 1200mV 85C Model Setup 'FSM:FSMUnit|pState.rns'
+Slack : -5.749
+TNS   : -43.443
+
+Type  : Slow 1200mV 85C Model Setup 'FSM:FSMUnit|pState.idle'
+Slack : -4.188
+TNS   : -19.343
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -4.665
-TNS   : -308.679
+Slack : -3.530
+TNS   : -277.111
 
-Type  : Slow 1200mV 85C Model Setup 'FSM:FSMUnit|pSt.rns'
-Slack : -4.402
-TNS   : -9.458
-
-Type  : Slow 1200mV 85C Model Setup 'FSM:FSMUnit|pSt.idle'
-Slack : -4.381
-TNS   : -19.772
-
-Type  : Slow 1200mV 85C Model Setup 'FSM:FSMUnit|pSt.spn'
-Slack : -4.021
-TNS   : -27.555
-
-Type  : Slow 1200mV 85C Model Hold 'FSM:FSMUnit|pSt.rns'
-Slack : 0.164
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'FSM:FSMUnit|pSt.spn'
-Slack : 0.226
-TNS   : 0.000
+Type  : Slow 1200mV 85C Model Setup 'FSM:FSMUnit|cycle'
+Slack : -2.887
+TNS   : -2.887
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
-Slack : 0.297
+Slack : 0.423
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'registerUnit:registerBlock|door_out'
-Slack : 1.062
+Type  : Slow 1200mV 85C Model Hold 'FSM:FSMUnit|pState.rns'
+Slack : 0.675
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'FSM:FSMUnit|pSt.idle'
-Slack : 1.347
+Type  : Slow 1200mV 85C Model Hold 'FSM:FSMUnit|pState.idle'
+Slack : 1.679
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FSM:FSMUnit|cycle'
+Slack : 2.573
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -134.070
+TNS   : -135.355
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'registerUnit:registerBlock|door_out'
-Slack : 0.349
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FSM:FSMUnit|pState.idle'
+Slack : 0.382
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FSM:FSMUnit|pSt.rns'
-Slack : 0.373
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FSM:FSMUnit|cycle'
+Slack : 0.417
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FSM:FSMUnit|pSt.spn'
-Slack : 0.412
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FSM:FSMUnit|pState.rns'
+Slack : 0.435
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FSM:FSMUnit|pSt.idle'
-Slack : 0.456
-TNS   : 0.000
+Type  : Slow 1200mV 0C Model Setup 'FSM:FSMUnit|pState.rns'
+Slack : -5.379
+TNS   : -40.755
 
-Type  : Slow 1200mV 0C Model Setup 'registerUnit:registerBlock|door_out'
-Slack : -5.140
-TNS   : -26.358
+Type  : Slow 1200mV 0C Model Setup 'FSM:FSMUnit|pState.idle'
+Slack : -3.913
+TNS   : -17.354
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -4.209
-TNS   : -274.209
+Slack : -3.168
+TNS   : -245.254
 
-Type  : Slow 1200mV 0C Model Setup 'FSM:FSMUnit|pSt.rns'
-Slack : -3.912
-TNS   : -8.381
-
-Type  : Slow 1200mV 0C Model Setup 'FSM:FSMUnit|pSt.idle'
-Slack : -3.871
-TNS   : -17.696
-
-Type  : Slow 1200mV 0C Model Setup 'FSM:FSMUnit|pSt.spn'
-Slack : -3.656
-TNS   : -24.813
-
-Type  : Slow 1200mV 0C Model Hold 'FSM:FSMUnit|pSt.rns'
-Slack : 0.180
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'FSM:FSMUnit|pSt.spn'
-Slack : 0.243
-TNS   : 0.000
+Type  : Slow 1200mV 0C Model Setup 'FSM:FSMUnit|cycle'
+Slack : -2.543
+TNS   : -2.543
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.244
+Slack : 0.383
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'registerUnit:registerBlock|door_out'
-Slack : 1.031
+Type  : Slow 1200mV 0C Model Hold 'FSM:FSMUnit|pState.rns'
+Slack : 0.617
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'FSM:FSMUnit|pSt.idle'
-Slack : 1.250
+Type  : Slow 1200mV 0C Model Hold 'FSM:FSMUnit|pState.idle'
+Slack : 1.696
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'FSM:FSMUnit|cycle'
+Slack : 2.358
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -134.070
+TNS   : -135.355
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'registerUnit:registerBlock|door_out'
-Slack : 0.295
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FSM:FSMUnit|cycle'
+Slack : 0.272
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FSM:FSMUnit|pSt.spn'
-Slack : 0.320
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FSM:FSMUnit|pState.idle'
+Slack : 0.334
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FSM:FSMUnit|pSt.rns'
-Slack : 0.405
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FSM:FSMUnit|pState.rns'
+Slack : 0.334
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FSM:FSMUnit|pSt.idle'
-Slack : 0.429
-TNS   : 0.000
+Type  : Fast 1200mV 0C Model Setup 'FSM:FSMUnit|pState.rns'
+Slack : -2.671
+TNS   : -18.549
 
-Type  : Fast 1200mV 0C Model Setup 'registerUnit:registerBlock|door_out'
-Slack : -2.406
-TNS   : -11.389
+Type  : Fast 1200mV 0C Model Setup 'FSM:FSMUnit|pState.idle'
+Slack : -1.771
+TNS   : -7.479
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -1.944
-TNS   : -98.703
+Slack : -1.211
+TNS   : -86.591
 
-Type  : Fast 1200mV 0C Model Setup 'FSM:FSMUnit|pSt.rns'
-Slack : -1.867
-TNS   : -3.872
-
-Type  : Fast 1200mV 0C Model Setup 'FSM:FSMUnit|pSt.idle'
-Slack : -1.829
-TNS   : -7.185
-
-Type  : Fast 1200mV 0C Model Setup 'FSM:FSMUnit|pSt.spn'
-Slack : -1.626
-TNS   : -10.845
+Type  : Fast 1200mV 0C Model Setup 'FSM:FSMUnit|cycle'
+Slack : -1.119
+TNS   : -1.119
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.018
+Slack : 0.148
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'FSM:FSMUnit|pSt.rns'
-Slack : 0.049
+Type  : Fast 1200mV 0C Model Hold 'FSM:FSMUnit|pState.rns'
+Slack : 0.377
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'FSM:FSMUnit|pSt.spn'
-Slack : 0.073
+Type  : Fast 1200mV 0C Model Hold 'FSM:FSMUnit|pState.idle'
+Slack : 0.590
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'registerUnit:registerBlock|door_out'
-Slack : 0.405
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'FSM:FSMUnit|pSt.idle'
-Slack : 0.510
+Type  : Fast 1200mV 0C Model Hold 'FSM:FSMUnit|cycle'
+Slack : 1.445
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -111.010
+TNS   : -112.301
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FSM:FSMUnit|pSt.spn'
-Slack : 0.297
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FSM:FSMUnit|cycle'
+Slack : 0.197
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FSM:FSMUnit|pSt.idle'
-Slack : 0.374
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FSM:FSMUnit|pState.idle'
+Slack : 0.357
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FSM:FSMUnit|pSt.rns'
-Slack : 0.408
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'registerUnit:registerBlock|door_out'
-Slack : 0.445
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FSM:FSMUnit|pState.rns'
+Slack : 0.366
 TNS   : 0.000
 
 ------------------------------------------------------------

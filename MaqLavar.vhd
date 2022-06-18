@@ -6,7 +6,7 @@ entity MaqLavar is
 	port(	CLOCK_50 	: in std_logic;
 			KEY		: in std_logic_vector(1 downto 0);
 			SW			: in std_logic_vector(3 downto 0);
-			LEDR		: out std_logic_vector(1 downto 0);
+			LEDR		: out std_logic_vector(3 downto 0);
 			LEDG		: out std_logic_vector(7 downto 0);
 			HEX0		: out std_logic_vector(6 downto 0);
 			HEX1		: out std_logic_vector(6 downto 0);
@@ -19,23 +19,25 @@ end MaqLavar;
 architecture Shell of MaqLavar is
 
 signal	s_startstop, s_reset, s_pulse, s_p1, s_p2, s_p3, s_door, s_timeEn, s_running, s_timeExp, s_newTime: std_logic;
-signal	s_prog 		: std_logic_vector(3 downto 0);
+signal	s_program, s_equal 		: std_logic_vector(3 downto 0);
 signal	s_timeReal, s_timeVal 	: std_logic_vector(7 downto 0);
 
 begin
-
-	process(CLOCK_50, s_startstop, s_running)
+	process(CLOCK_50, s_program)
 	begin
 		if(rising_edge(CLOCK_50)) then
-			if (s_reset = '1') then
-				s_running <= '0';
-			elsif (s_startstop = '1') then
-				s_running <= not s_running;
+			if(s_program = "0001") then
+				LEDR(3 downto 1) <= "001";
+			elsif(s_program = "0010") then
+				LEDR(3 downto 1) <= "010";
+			elsif(s_program = "0011") then
+				LEDR(3 downto 1) <= "100";
+			else
+				LEDR(3 downto 1) <= "000";
 			end if;
-			LEDR(1) <= s_running;
 		end if;
-
 	end process;
+	
 	
 	registerBlock	: entity work.registerUnit(Behavioral)
 		port map(
@@ -56,23 +58,21 @@ begin
 	FSMUnit			: entity work.FSM(Behavioral)
 		port map(
 			clk			=> CLOCK_50,
-			running		=> s_running,
+			startstop	=> s_startstop,
 			p1				=> s_p1,
 			p2				=> s_p2,
 			p3				=> s_p3,
 			reset			=> s_reset,
 			timeExp		=> s_timeExp,
 			door			=> s_door,
-			program		=> s_prog,
+			program		=> s_program,
 			newTime		=> s_newTime,
 			timeVal		=> s_timeVal,
 			timeEn		=> s_timeEn,
-			waterValve	=> LEDG(0),
-			rinse			=> LEDG(1),
-			waterPump	=> LEDG(2),
-			spin			=> LEDG(3),
-			ledOn			=> LEDR(0),
-			doorLed		=> LEDG(7));
+			functionLeds=> LEDG(3 downto 0),
+			ledR			=> LEDR(0),
+			doorLed		=> LEDG(7),
+			equal			=> s_equal);
 			
 	timerAux			: entity work.Timer(Behavioral)
 		port map(
@@ -95,13 +95,14 @@ begin
 	displayUnit 	: entity work.Display(Behavioral)
 		port map(
 			timeReal		=>	s_timeReal,
-			timeEn		=>	s_timeEn,
-			enDisplay	=>	HEX6,
-			program 		=>	s_prog,
+			equal			=>	s_equal,
+			equalDisplay=>	HEX6,
+			program 		=>	s_program,
 			leftDigit	=> HEX5,
 			rightDigit	=>	HEX4,
 			pDisplay 	=>	HEX1,
 			pnDisplay	=> HEX0);
-			
+	
+	
 	LEDG(6 downto 4) <= "000";
 end Shell;

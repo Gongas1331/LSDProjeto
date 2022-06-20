@@ -2,112 +2,112 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -4.784
-TNS   : -308.927
-
-Type  : Slow 1200mV 85C Model Setup 'FSM:FSMUnit|cycle'
-Slack : -4.635
-TNS   : -9.241
-
 Type  : Slow 1200mV 85C Model Setup 'FSM:FSMUnit|pState.idle'
-Slack : -1.530
-TNS   : -4.112
+Slack : -5.739
+TNS   : -24.024
 
-Type  : Slow 1200mV 85C Model Hold 'FSM:FSMUnit|cycle'
-Slack : -0.349
-TNS   : -0.349
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -4.388
+TNS   : -309.373
+
+Type  : Slow 1200mV 85C Model Setup 'FSM:FSMUnit|pState.def'
+Slack : -3.850
+TNS   : -27.209
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
-Slack : 0.083
+Slack : 0.370
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'FSM:FSMUnit|pState.idle'
-Slack : 0.661
+Slack : 0.381
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FSM:FSMUnit|pState.def'
+Slack : 0.705
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -137.925
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FSM:FSMUnit|cycle'
-Slack : 0.412
-TNS   : 0.000
+TNS   : -143.065
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FSM:FSMUnit|pState.idle'
-Slack : 0.437
+Slack : 0.383
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -4.391
-TNS   : -274.303
-
-Type  : Slow 1200mV 0C Model Setup 'FSM:FSMUnit|cycle'
-Slack : -4.220
-TNS   : -8.338
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FSM:FSMUnit|pState.def'
+Slack : 0.399
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'FSM:FSMUnit|pState.idle'
-Slack : -1.305
-TNS   : -3.470
+Slack : -5.165
+TNS   : -21.446
 
-Type  : Slow 1200mV 0C Model Hold 'FSM:FSMUnit|cycle'
-Slack : -0.322
-TNS   : -0.322
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -4.032
+TNS   : -274.691
+
+Type  : Slow 1200mV 0C Model Setup 'FSM:FSMUnit|pState.def'
+Slack : -3.567
+TNS   : -25.053
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.032
+Slack : 0.324
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'FSM:FSMUnit|pState.idle'
-Slack : 0.598
+Slack : 0.336
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'FSM:FSMUnit|pState.def'
+Slack : 0.727
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -137.925
+TNS   : -143.065
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FSM:FSMUnit|cycle'
-Slack : 0.437
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FSM:FSMUnit|pState.def'
+Slack : 0.348
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FSM:FSMUnit|pState.idle'
-Slack : 0.468
+Slack : 0.370
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'FSM:FSMUnit|cycle'
-Slack : -2.119
-TNS   : -4.075
+Type  : Fast 1200mV 0C Model Setup 'FSM:FSMUnit|pState.idle'
+Slack : -2.576
+TNS   : -10.094
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -1.968
-TNS   : -100.626
+Slack : -1.745
+TNS   : -98.966
 
-Type  : Fast 1200mV 0C Model Setup 'FSM:FSMUnit|pState.idle'
-Slack : -0.314
-TNS   : -0.665
-
-Type  : Fast 1200mV 0C Model Hold 'FSM:FSMUnit|cycle'
-Slack : -0.139
-TNS   : -0.139
+Type  : Fast 1200mV 0C Model Setup 'FSM:FSMUnit|pState.def'
+Slack : -1.525
+TNS   : -10.040
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
-Slack : -0.039
-TNS   : -0.039
+Slack : 0.013
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'FSM:FSMUnit|pState.idle'
-Slack : 0.316
+Slack : 0.176
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'FSM:FSMUnit|pState.def'
+Slack : 0.221
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -114.190
+TNS   : -118.560
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FSM:FSMUnit|pState.idle'
-Slack : 0.342
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FSM:FSMUnit|pState.def'
+Slack : 0.427
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FSM:FSMUnit|cycle'
-Slack : 0.382
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FSM:FSMUnit|pState.idle'
+Slack : 0.445
 TNS   : 0.000
 
 ------------------------------------------------------------

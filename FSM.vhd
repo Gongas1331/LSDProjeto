@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
+use IEEE.NUMERIC_STD.all;
 
 entity FSM is
 	port (
@@ -9,30 +10,32 @@ entity FSM is
 		p1           : in std_logic;
 		p2           : in std_logic;
 		p3           : in std_logic;
+		defSw			 :	in std_logic;
 		timeExp      : in std_logic; --'1' when the current task is done
 		door         : in std_logic; --checks if door is open
 		program      : out std_logic_vector(3 downto 0);
 		newTime      : out std_logic;
 		timeVal      : out std_logic_vector(7 downto 0); --display total program time when selecting a program and a task's time when running
 		timeEn       : out std_logic;                    --enables the time timer
-		functionLeds : out std_logic_vector(3 downto 0); --leds for the functions(3:spin, 2:wOut, 1:rns, 0:wIn)
+		functionLeds : out std_logic_vector(3 downto 0); --leds for the functions(3:spin, 2:water_pump, 1:rinse, 0:water_valve)
 		ledR         : out std_logic;                    --led that indicates if the program is running
 		doorLed      : out std_logic;
+		defOn		 	 : out std_logic_vector(7 downto 0);
 		equal        : out std_logic_vector(3 downto 0));
 end FSM;
 
 architecture Behavioral of FSM is
 
-	--states: waiting for input(idle), water in, rinse, water out, spin, turning off
+	--states: waiting for input(idle), water in, rinse, water out, spin, turning off, deferred
 
-	type State is (idle, wIn, rns, wOut, spn, tOff);
+	type State is (idle, wIn, rns, wOut, spn, tOff, def);
 	signal pState, nState : State := idle; --present state and next state, by default machine begins in idle
 
 	signal s_program               : std_logic_vector(3 downto 0) := "1111";     --records the program inputed
 	signal cycle, programEnd, ison, nCycle, nProgramEnd : std_logic                    := '0';        --cycle enables the repetition of the cyle(wIn, rns, wOut); programEnd lets the machine turn off; ison tells if the machine is working
 	signal diffState               : std_logic                    := '1';        --indicates if the state has changed
 	signal s_timeEn                : std_logic                    := '1';        --enables the timer
-	signal s_timeVal               : std_logic_vector(7 downto 0); --display total program time when selecting a program and a task's time when running
+	signal s_timeVal, s_defOn               : std_logic_vector(7 downto 0); --display total program time when selecting a program and a task's time when running
 
 	--time for each task (BCD)
 
@@ -41,6 +44,7 @@ architecture Behavioral of FSM is
 	constant wOutTime : std_logic_vector(7 downto 0) := "00000010"; --2s
 	constant spnTime  : std_logic_vector(7 downto 0) := "00000100"; --4s
 	constant offTime  : std_logic_vector(7 downto 0) := "00000010"; --2s
+	constant defTime  : std_logic_vector(7 downto 0) := "00111100"; --60s to wich the program time will be subtracted
 
 	--total time for the different programs (BCD)
 
@@ -57,6 +61,12 @@ begin
 				pState    <= idle;
 				s_timeEn	<= '1';
 			else
+				if (pState = def) then
+					s_defOn <= "11011100";
+				else
+					s_defOn <= "11111111";
+				end if;
+			
 				if (pState /= nState) or (pState = idle) then
 					diffState <= '1';
 				else
@@ -108,16 +118,20 @@ begin
 				end if;
 				
 				if (startstop = '1' and door = '0') then
-					if (s_program = "0001") then
-						nCycle  <= '1';
-						nState <= wIn;
-					elsif (s_program = "0010") then
-						nState <= wIn;
-					elsif (s_program = "0011") then
-						nProgramEnd   <= '1';
-						nState <= spn;
+					if defSw = '1' then
+						nState <= def;
 					else
-						nState <= idle;
+						if (s_program = "0001") then
+							nCycle  <= '1';
+							nState <= wIn;
+						elsif (s_program = "0010") then
+							nState <= wIn;
+						elsif (s_program = "0011") then
+							nProgramEnd   <= '1';
+							nState <= spn;
+						else
+							nState <= idle;
+						end if;
 					end if;
 				else
 					nState <= idle;
@@ -139,11 +153,11 @@ begin
 				s_timeVal    <= rnsTime;
 
 				
-					if (s_program = "0001" and Cycle = '1') then
-						nCycle  <= '1';
-					else
-						nCycle  <= '0';
-					end if;
+				if (s_program = "0001" and Cycle = '1') then
+					nCycle  <= '1';
+				else
+					nCycle  <= '0';
+				end if;
 				
 				
 				if (timeExp = '1') then
@@ -198,11 +212,37 @@ begin
 				else
 					nState <= tOff;
 				end if;
+				
+			when def =>
+				functionLeds <= "0000";
+				if (s_program = "0001") then
+					s_timeVal <= std_logic_vector( unsigned(defTime) - unsigned(p1time));
+				elsif (s_program = "0010") then
+					s_timeVal <= std_logic_vector( unsigned(defTime) - unsigned(p2time));
+				elsif (s_program = "0011") then
+					s_timeVal <= std_logic_vector( unsigned(defTime) - unsigned(p3time));
+				else
+					nState <= idle;
+				end if;
+				if (timeExp = '1') then
+					if (s_program = "0001") then
+						nState <= wIn;
+					elsif (s_program = "0010") then
+						nState <= wIn;
+					elsif (s_program = "0011") then
+						nState <= spn;
+					else
+						nState <= idle;
+					end if;
+				else
+					nState <= def;
+				end if;
 
 		end case;
 
 	end process;
 
+	defOn <= s_defOn;
 	equal   <= "1" & s_timeEn & "11";
 	doorLed <= door;
 	ledR    <= ison;

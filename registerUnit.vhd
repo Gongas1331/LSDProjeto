@@ -9,12 +9,14 @@ entity registerUnit is
         p1_in         : in std_logic;
         p2_in         : in std_logic;
         p3_in         : in std_logic;
+		  def_in			 : in std_logic;
         reset_in      : in std_logic;
         startstop_in  : in std_logic;
         door_out      : out std_logic;
         p1_out        : out std_logic;
         p2_out        : out std_logic;
         p3_out        : out std_logic;
+		  def_out		 : out std_logic;
         reset_out     : out std_logic;
         startstop_out : out std_logic);
 end registerUnit;
@@ -27,6 +29,7 @@ begin
             p1_out   <= p1_in;
             p2_out   <= p2_in;
             p3_out   <= p3_in;
+				def_out  <= def_in;
         end if;
     end process;
     debounceReset : entity work.DebounceUnit(Behavioral)

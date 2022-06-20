@@ -5,9 +5,6 @@ use IEEE.numeric_std.all;
 entity display is
 	port(	timeReal 	: in std_logic_vector(7 downto 0);
 			equal			: in std_logic_vector(3 downto 0);
-			defOn			: in std_logic_vector(7 downto 0);
-			defDisplay1	: out std_logic_vector(6 downto 0);
-			defDisplay2	: out std_logic_vector(6 downto 0);
 			equalDisplay: out std_logic_vector(6 downto 0); 	-- displays = if the program is paused, assign to hex6
 			program 		: in std_logic_vector(3 downto 0); 		-- current program
 			leftDigit	: out std_logic_vector(6 downto 0); 	-- assign to hex5
@@ -47,16 +44,6 @@ begin
 			port map(
 				bcd => s_unit,
 				seg7 => rightDigit);
-				
-	bcd7segDef1	: entity work.bcd7seg(Behavioral)
-			port map(
-				bcd => defOn(3 downto 0),
-				seg7=> defDisplay1);
-				
-	bcd7segDef2	: entity work.bcd7seg(Behavioral)
-			port map(
-				bcd => defOn(7 downto 4),
-				seg7=> defDisplay2);
 	
 	pDisplay <= "0001100";
 

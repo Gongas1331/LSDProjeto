@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MaqLavar
-Mon Jun 20 01:04:02 2022
+Sun Jun 19 23:18:48 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -15,18 +15,17 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |MaqLavar|FSM:FSMUnit|pState
   9. User-Specified and Inferred Latches
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: registerUnit:registerBlock|DebounceUnit:debounceReset
- 15. Parameter Settings for User Entity Instance: registerUnit:registerBlock|DebounceUnit:debounceStartStop
- 16. Parameter Settings for User Entity Instance: PulseGen:pulseGenUnit
- 17. Parameter Settings for Inferred Entity Instance: display:displayUnit|bin2bcd:bin2bcdTime|lpm_divide:Mod0
- 18. Parameter Settings for Inferred Entity Instance: display:displayUnit|bin2bcd:bin2bcdTime|lpm_divide:Div0
- 19. Post-Synthesis Netlist Statistics for Top Partition
- 20. Elapsed Time Per Partition
- 21. Analysis & Synthesis Messages
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: registerUnit:registerBlock|DebounceUnit:debounceReset
+ 14. Parameter Settings for User Entity Instance: registerUnit:registerBlock|DebounceUnit:debounceStartStop
+ 15. Parameter Settings for User Entity Instance: PulseGen:pulseGenUnit
+ 16. Parameter Settings for Inferred Entity Instance: display:displayUnit|bin2bcd:bin2bcdTime|lpm_divide:Mod0
+ 17. Parameter Settings for Inferred Entity Instance: display:displayUnit|bin2bcd:bin2bcdTime|lpm_divide:Div0
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -53,16 +52,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jun 20 01:04:02 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sun Jun 19 23:18:48 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; MaqLavar                                    ;
 ; Top-level Entity Name              ; MaqLavar                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 365                                         ;
-;     Total combinational functions  ; 357                                         ;
-;     Dedicated logic registers      ; 109                                         ;
-; Total registers                    ; 109                                         ;
-; Total pins                         ; 70                                          ;
+; Total logic elements               ; 344                                         ;
+;     Total combinational functions  ; 338                                         ;
+;     Dedicated logic registers      ; 105                                         ;
+; Total registers                    ; 105                                         ;
+; Total pins                         ; 54                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -206,30 +205,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 365            ;
+; Estimated Total logic elements              ; 344            ;
 ;                                             ;                ;
-; Total combinational functions               ; 357            ;
+; Total combinational functions               ; 338            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 132            ;
-;     -- 3 input functions                    ; 67             ;
-;     -- <=2 input functions                  ; 158            ;
+;     -- 4 input functions                    ; 127            ;
+;     -- 3 input functions                    ; 61             ;
+;     -- <=2 input functions                  ; 150            ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 257            ;
+;     -- normal mode                          ; 238            ;
 ;     -- arithmetic mode                      ; 100            ;
 ;                                             ;                ;
-; Total registers                             ; 109            ;
-;     -- Dedicated logic registers            ; 109            ;
+; Total registers                             ; 105            ;
+;     -- Dedicated logic registers            ; 105            ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
-; I/O pins                                    ; 70             ;
+; I/O pins                                    ; 54             ;
 ;                                             ;                ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 109            ;
-; Total fan-out                               ; 1431           ;
-; Average fan-out                             ; 2.36           ;
+; Maximum fan-out                             ; 105            ;
+; Total fan-out                               ; 1341           ;
+; Average fan-out                             ; 2.43           ;
 +---------------------------------------------+----------------+
 
 
@@ -238,12 +237,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                               ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |MaqLavar                                    ; 357 (0)             ; 109 (4)                   ; 0           ; 0            ; 0       ; 0         ; 70   ; 0            ; |MaqLavar                                                                                                                                         ; MaqLavar            ; work         ;
-;    |FSM:FSMUnit|                             ; 67 (67)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavar|FSM:FSMUnit                                                                                                                             ; FSM                 ; work         ;
+; |MaqLavar                                    ; 338 (0)             ; 105 (3)                   ; 0           ; 0            ; 0       ; 0         ; 54   ; 0            ; |MaqLavar                                                                                                                                         ; MaqLavar            ; work         ;
+;    |FSM:FSMUnit|                             ; 43 (43)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavar|FSM:FSMUnit                                                                                                                             ; FSM                 ; work         ;
 ;    |PulseGen:pulseGenUnit|                   ; 37 (37)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavar|PulseGen:pulseGenUnit                                                                                                                   ; PulseGen            ; work         ;
-;    |Timer:timerAux|                          ; 22 (22)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavar|Timer:timerAux                                                                                                                          ; Timer               ; work         ;
-;    |display:displayUnit|                     ; 94 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavar|display:displayUnit                                                                                                                     ; display             ; work         ;
-;       |bcd7seg:bcd7segProgram|               ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavar|display:displayUnit|bcd7seg:bcd7segProgram                                                                                              ; bcd7seg             ; work         ;
+;    |Timer:timerAux|                          ; 31 (31)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavar|Timer:timerAux                                                                                                                          ; Timer               ; work         ;
+;    |display:displayUnit|                     ; 91 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavar|display:displayUnit                                                                                                                     ; display             ; work         ;
+;       |bcd7seg:bcd7segProgram|               ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavar|display:displayUnit|bcd7seg:bcd7segProgram                                                                                              ; bcd7seg             ; work         ;
 ;       |bcd7seg:bcd7segTimeL|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavar|display:displayUnit|bcd7seg:bcd7segTimeL                                                                                                ; bcd7seg             ; work         ;
 ;       |bcd7seg:bcd7segTimeR|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavar|display:displayUnit|bcd7seg:bcd7segTimeR                                                                                                ; bcd7seg             ; work         ;
 ;       |bin2bcd:bin2bcdTime|                  ; 73 (7)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavar|display:displayUnit|bin2bcd:bin2bcdTime                                                                                                 ; bin2bcd             ; work         ;
@@ -255,63 +254,42 @@ https://fpgasoftware.intel.com/eula.
 ;             |lpm_divide_m9m:auto_generated|  ; 33 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavar|display:displayUnit|bin2bcd:bin2bcdTime|lpm_divide:Mod0|lpm_divide_m9m:auto_generated                                                   ; lpm_divide_m9m      ; work         ;
 ;                |sign_div_unsign_bkh:divider| ; 33 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavar|display:displayUnit|bin2bcd:bin2bcdTime|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh ; work         ;
 ;                   |alt_u_div_a4f:divider|    ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavar|display:displayUnit|bin2bcd:bin2bcdTime|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f       ; work         ;
-;    |registerUnit:registerBlock|              ; 137 (0)             ; 57 (5)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavar|registerUnit:registerBlock                                                                                                              ; registerUnit        ; work         ;
+;    |registerUnit:registerBlock|              ; 136 (0)             ; 56 (4)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavar|registerUnit:registerBlock                                                                                                              ; registerUnit        ; work         ;
 ;       |DebounceUnit:debounceReset|           ; 68 (68)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavar|registerUnit:registerBlock|DebounceUnit:debounceReset                                                                                   ; DebounceUnit        ; work         ;
-;       |DebounceUnit:debounceStartStop|       ; 69 (69)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavar|registerUnit:registerBlock|DebounceUnit:debounceStartStop                                                                               ; DebounceUnit        ; work         ;
+;       |DebounceUnit:debounceStartStop|       ; 68 (68)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavar|registerUnit:registerBlock|DebounceUnit:debounceStartStop                                                                               ; DebounceUnit        ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------+
-; State Machine - |MaqLavar|FSM:FSMUnit|pState                                                              ;
-+-------------+------------+-------------+------------+-------------+------------+------------+-------------+
-; Name        ; pState.def ; pState.tOff ; pState.spn ; pState.wOut ; pState.rns ; pState.wIn ; pState.idle ;
-+-------------+------------+-------------+------------+-------------+------------+------------+-------------+
-; pState.idle ; 0          ; 0           ; 0          ; 0           ; 0          ; 0          ; 0           ;
-; pState.wIn  ; 0          ; 0           ; 0          ; 0           ; 0          ; 1          ; 1           ;
-; pState.rns  ; 0          ; 0           ; 0          ; 0           ; 1          ; 0          ; 1           ;
-; pState.wOut ; 0          ; 0           ; 0          ; 1           ; 0          ; 0          ; 1           ;
-; pState.spn  ; 0          ; 0           ; 1          ; 0           ; 0          ; 0          ; 1           ;
-; pState.tOff ; 0          ; 1           ; 0          ; 0           ; 0          ; 0          ; 1           ;
-; pState.def  ; 1          ; 0           ; 0          ; 0           ; 0          ; 0          ; 1           ;
-+-------------+------------+-------------+------------+-------------+------------+------------+-------------+
++----------------------------------------------------------------------------------------------+
+; State Machine - |MaqLavar|FSM:FSMUnit|pState                                                 ;
++-------------+-------------+------------+-------------+------------+------------+-------------+
+; Name        ; pState.tOff ; pState.spn ; pState.wOut ; pState.rns ; pState.wIn ; pState.idle ;
++-------------+-------------+------------+-------------+------------+------------+-------------+
+; pState.idle ; 0           ; 0          ; 0           ; 0          ; 0          ; 0           ;
+; pState.wIn  ; 0           ; 0          ; 0           ; 0          ; 1          ; 1           ;
+; pState.rns  ; 0           ; 0          ; 0           ; 1          ; 0          ; 1           ;
+; pState.wOut ; 0           ; 0          ; 1           ; 0          ; 0          ; 1           ;
+; pState.spn  ; 0           ; 1          ; 0           ; 0          ; 0          ; 1           ;
+; pState.tOff ; 1           ; 0          ; 0           ; 0          ; 0          ; 1           ;
++-------------+-------------+------------+-------------+------------+------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                    ;
-+-----------------------------------------------------+-------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal     ; Free of Timing Hazards ;
-+-----------------------------------------------------+-------------------------+------------------------+
-; FSM:FSMUnit|ison                                    ; FSM:FSMUnit|pState.def  ; yes                    ;
-; FSM:FSMUnit|s_program[0]                            ; FSM:FSMUnit|pState.idle ; yes                    ;
-; FSM:FSMUnit|s_program[1]                            ; FSM:FSMUnit|pState.idle ; yes                    ;
-; FSM:FSMUnit|s_program[2]                            ; FSM:FSMUnit|pState.idle ; yes                    ;
-; FSM:FSMUnit|s_program[3]                            ; FSM:FSMUnit|pState.idle ; yes                    ;
-; FSM:FSMUnit|s_timeVal[0]                            ; FSM:FSMUnit|Selector20  ; yes                    ;
-; FSM:FSMUnit|s_timeVal[1]                            ; FSM:FSMUnit|Selector20  ; yes                    ;
-; FSM:FSMUnit|s_timeVal[2]                            ; FSM:FSMUnit|Selector20  ; yes                    ;
-; FSM:FSMUnit|s_timeVal[3]                            ; FSM:FSMUnit|Selector20  ; yes                    ;
-; FSM:FSMUnit|s_timeVal[4]                            ; FSM:FSMUnit|Selector20  ; yes                    ;
-; FSM:FSMUnit|s_timeVal[5]                            ; FSM:FSMUnit|Selector20  ; yes                    ;
-; FSM:FSMUnit|nProgramEnd                             ; FSM:FSMUnit|Selector22  ; yes                    ;
-; FSM:FSMUnit|nCycle                                  ; FSM:FSMUnit|Selector23  ; yes                    ;
-; FSM:FSMUnit|s_timeVal[6]                            ; FSM:FSMUnit|Selector20  ; yes                    ;
-; FSM:FSMUnit|s_timeVal[7]                            ; FSM:FSMUnit|Selector20  ; yes                    ;
-; Number of user-specified and inferred latches = 15  ;                         ;                        ;
-+-----------------------------------------------------+-------------------------+------------------------+
++-------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                   ;
++----------------------------------------------------+-------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal     ; Free of Timing Hazards ;
++----------------------------------------------------+-------------------------+------------------------+
+; FSM:FSMUnit|s_program[0]                           ; FSM:FSMUnit|pState.idle ; yes                    ;
+; FSM:FSMUnit|s_program[1]                           ; FSM:FSMUnit|pState.idle ; yes                    ;
+; FSM:FSMUnit|s_program[2]                           ; FSM:FSMUnit|pState.idle ; yes                    ;
+; FSM:FSMUnit|s_program[3]                           ; FSM:FSMUnit|pState.idle ; yes                    ;
+; FSM:FSMUnit|nProgramEnd                            ; FSM:FSMUnit|Selector10  ; yes                    ;
+; FSM:FSMUnit|nCycle                                 ; FSM:FSMUnit|Selector11  ; yes                    ;
+; Number of user-specified and inferred latches = 6  ;                         ;                        ;
++----------------------------------------------------+-------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; FSM:FSMUnit|s_defOn[2..4,6,7]         ; Stuck at VCC due to stuck port data_in ;
-; FSM:FSMUnit|s_defOn[1,5]              ; Merged with FSM:FSMUnit|s_defOn[0]     ;
-; Total Number of Removed Registers = 7 ;                                        ;
-+---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -319,12 +297,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 109   ;
+; Total registers                              ; 105   ;
 ; Number of registers using Synchronous Clear  ; 27    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 48    ;
+; Number of registers using Clock Enable       ; 45    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -338,10 +316,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Timer:timerAux|s_counter[1]             ; 8       ;
 ; Timer:timerAux|s_counter[2]             ; 10      ;
 ; Timer:timerAux|s_counter[3]             ; 9       ;
-; Timer:timerAux|s_counter[4]             ; 9       ;
-; Timer:timerAux|s_counter[5]             ; 9       ;
-; FSM:FSMUnit|s_timeEn                    ; 4       ;
-; FSM:FSMUnit|diffState                   ; 10      ;
+; Timer:timerAux|s_counter[4]             ; 10      ;
+; Timer:timerAux|s_counter[5]             ; 10      ;
+; FSM:FSMUnit|s_timeEn                    ; 5       ;
+; FSM:FSMUnit|diffState                   ; 16      ;
 ; Timer:timerAux|s_counter[6]             ; 2       ;
 ; Timer:timerAux|s_counter[7]             ; 2       ;
 ; Total number of inverted registers = 10 ;         ;
@@ -353,10 +331,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
-; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |MaqLavar|PulseGen:pulseGenUnit|s_counter[13]                                         ;
-; 5:1                ; 23 bits   ; 69 LEs        ; 46 LEs               ; 23 LEs                 ; Yes        ; |MaqLavar|registerUnit:registerBlock|DebounceUnit:debounceStartStop|s_debounceCnt[17] ;
-; 5:1                ; 23 bits   ; 69 LEs        ; 46 LEs               ; 23 LEs                 ; Yes        ; |MaqLavar|registerUnit:registerBlock|DebounceUnit:debounceReset|s_debounceCnt[2]      ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |MaqLavar|Timer:timerAux|s_counter[5]                                                 ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |MaqLavar|PulseGen:pulseGenUnit|s_counter[21]                                         ;
+; 5:1                ; 23 bits   ; 69 LEs        ; 46 LEs               ; 23 LEs                 ; Yes        ; |MaqLavar|registerUnit:registerBlock|DebounceUnit:debounceStartStop|s_debounceCnt[22] ;
+; 5:1                ; 23 bits   ; 69 LEs        ; 46 LEs               ; 23 LEs                 ; Yes        ; |MaqLavar|registerUnit:registerBlock|DebounceUnit:debounceReset|s_debounceCnt[22]     ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |MaqLavar|Timer:timerAux|s_counter[7]                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
 
 
@@ -447,24 +425,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 70                          ;
-; cycloneiii_ff         ; 109                         ;
-;     ENA               ; 48                          ;
+; boundary_port         ; 54                          ;
+; cycloneiii_ff         ; 105                         ;
+;     ENA               ; 45                          ;
 ;     SCLR              ; 27                          ;
-;     plain             ; 34                          ;
-; cycloneiii_lcell_comb ; 363                         ;
+;     plain             ; 33                          ;
+; cycloneiii_lcell_comb ; 344                         ;
 ;     arith             ; 100                         ;
 ;         2 data inputs ; 82                          ;
 ;         3 data inputs ; 18                          ;
-;     normal            ; 263                         ;
+;     normal            ; 244                         ;
 ;         0 data inputs ; 8                           ;
-;         1 data inputs ; 11                          ;
-;         2 data inputs ; 63                          ;
-;         3 data inputs ; 49                          ;
-;         4 data inputs ; 132                         ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 56                          ;
+;         3 data inputs ; 43                          ;
+;         4 data inputs ; 127                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.20                        ;
-; Average LUT depth     ; 4.78                        ;
+; Average LUT depth     ; 4.88                        ;
 +-----------------------+-----------------------------+
 
 
@@ -473,7 +451,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -483,18 +461,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Jun 20 01:03:54 2022
+    Info: Processing started: Sun Jun 19 23:18:39 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MaqLavar -c MaqLavar
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file fsm.vhd
-    Info (12022): Found design unit 1: FSM-Behavioral File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 27
-    Info (12023): Found entity 1: FSM File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 5
+    Info (12022): Found design unit 1: FSM-Behavioral File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 24
+    Info (12023): Found entity 1: FSM File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file debounceunit.vhd
     Info (12022): Found design unit 1: DebounceUnit-Behavioral File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/DebounceUnit.vhd Line: 18
     Info (12023): Found entity 1: DebounceUnit File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/DebounceUnit.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file display.vhd
-    Info (12022): Found design unit 1: display-Behavioral File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Display.vhd Line: 20
+    Info (12022): Found design unit 1: display-Behavioral File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Display.vhd Line: 17
     Info (12023): Found entity 1: display File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Display.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file timer.vhd
     Info (12022): Found design unit 1: Timer-Behavioral File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Timer.vhd Line: 15
@@ -503,80 +481,61 @@ Info (12021): Found 2 design units, including 1 entities, in source file bcd7seg
     Info (12022): Found design unit 1: bcd7seg-Behavioral File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/bcd7seg.vhd Line: 9
     Info (12023): Found entity 1: bcd7seg File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/bcd7seg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file registerunit.vhd
-    Info (12022): Found design unit 1: registerUnit-Behavioral File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/registerUnit.vhd Line: 23
+    Info (12022): Found design unit 1: registerUnit-Behavioral File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/registerUnit.vhd Line: 21
     Info (12023): Found entity 1: registerUnit File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/registerUnit.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file pulsegen.vhd
     Info (12022): Found design unit 1: PulseGen-Behavioral File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/PulseGen.vhd Line: 12
     Info (12023): Found entity 1: PulseGen File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/PulseGen.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file maqlavar.vhd
-    Info (12022): Found design unit 1: MaqLavar-Shell File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 22
+    Info (12022): Found design unit 1: MaqLavar-Shell File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 20
     Info (12023): Found entity 1: MaqLavar File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file bin2bcd.vhd
     Info (12022): Found design unit 1: bin2bcd-Behavioral File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/bin2bcd.vhd Line: 10
     Info (12023): Found entity 1: bin2bcd File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/bin2bcd.vhd Line: 5
 Info (12127): Elaborating entity "MaqLavar" for the top level hierarchy
-Info (12129): Elaborating entity "registerUnit" using architecture "A:behavioral" for hierarchy "registerUnit:registerBlock" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 48
-Info (12129): Elaborating entity "DebounceUnit" using architecture "A:behavioral" for hierarchy "registerUnit:registerBlock|DebounceUnit:debounceReset" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/registerUnit.vhd Line: 35
-Info (12129): Elaborating entity "FSM" using architecture "A:behavioral" for hierarchy "FSM:FSMUnit" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 66
-Warning (10492): VHDL Process Statement warning at FSM.vhd(106): signal "p1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 106
-Warning (10492): VHDL Process Statement warning at FSM.vhd(106): signal "p2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 106
-Warning (10492): VHDL Process Statement warning at FSM.vhd(106): signal "p3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 106
-Warning (10492): VHDL Process Statement warning at FSM.vhd(109): signal "p1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 109
-Warning (10492): VHDL Process Statement warning at FSM.vhd(109): signal "p2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 109
-Warning (10492): VHDL Process Statement warning at FSM.vhd(109): signal "p3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 109
-Warning (10492): VHDL Process Statement warning at FSM.vhd(112): signal "p1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 112
-Warning (10492): VHDL Process Statement warning at FSM.vhd(112): signal "p2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 112
-Warning (10492): VHDL Process Statement warning at FSM.vhd(112): signal "p3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 112
-Warning (10492): VHDL Process Statement warning at FSM.vhd(120): signal "startstop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 120
-Warning (10492): VHDL Process Statement warning at FSM.vhd(120): signal "door" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 120
-Warning (10492): VHDL Process Statement warning at FSM.vhd(121): signal "defSw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 121
-Warning (10492): VHDL Process Statement warning at FSM.vhd(124): signal "s_program" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 124
-Warning (10492): VHDL Process Statement warning at FSM.vhd(127): signal "s_program" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 127
-Warning (10492): VHDL Process Statement warning at FSM.vhd(129): signal "s_program" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 129
-Warning (10492): VHDL Process Statement warning at FSM.vhd(144): signal "timeExp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 144
-Warning (10492): VHDL Process Statement warning at FSM.vhd(156): signal "s_program" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at FSM.vhd(156): signal "cycle" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at FSM.vhd(163): signal "timeExp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 163
-Warning (10492): VHDL Process Statement warning at FSM.vhd(174): signal "timeExp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 174
-Warning (10492): VHDL Process Statement warning at FSM.vhd(175): signal "programEnd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 175
-Warning (10492): VHDL Process Statement warning at FSM.vhd(178): signal "cycle" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 178
-Warning (10492): VHDL Process Statement warning at FSM.vhd(178): signal "programEnd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 178
-Warning (10492): VHDL Process Statement warning at FSM.vhd(181): signal "cycle" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 181
-Warning (10492): VHDL Process Statement warning at FSM.vhd(181): signal "programEnd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 181
-Warning (10492): VHDL Process Statement warning at FSM.vhd(198): signal "timeExp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 198
-Warning (10492): VHDL Process Statement warning at FSM.vhd(210): signal "timeExp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 210
-Warning (10492): VHDL Process Statement warning at FSM.vhd(218): signal "s_program" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 218
-Warning (10492): VHDL Process Statement warning at FSM.vhd(220): signal "s_program" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 220
-Warning (10492): VHDL Process Statement warning at FSM.vhd(222): signal "s_program" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 222
-Warning (10492): VHDL Process Statement warning at FSM.vhd(227): signal "timeExp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 227
-Warning (10492): VHDL Process Statement warning at FSM.vhd(228): signal "s_program" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 228
-Warning (10492): VHDL Process Statement warning at FSM.vhd(230): signal "s_program" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 230
-Warning (10492): VHDL Process Statement warning at FSM.vhd(232): signal "s_program" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 232
-Warning (10631): VHDL Process Statement warning at FSM.vhd(98): inferring latch(es) for signal or variable "ison", which holds its previous value in one or more paths through the process File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Warning (10631): VHDL Process Statement warning at FSM.vhd(98): inferring latch(es) for signal or variable "nCycle", which holds its previous value in one or more paths through the process File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Warning (10631): VHDL Process Statement warning at FSM.vhd(98): inferring latch(es) for signal or variable "nProgramEnd", which holds its previous value in one or more paths through the process File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Warning (10631): VHDL Process Statement warning at FSM.vhd(98): inferring latch(es) for signal or variable "s_program", which holds its previous value in one or more paths through the process File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Warning (10631): VHDL Process Statement warning at FSM.vhd(98): inferring latch(es) for signal or variable "s_timeVal", which holds its previous value in one or more paths through the process File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Info (10041): Inferred latch for "s_timeVal[0]" at FSM.vhd(98) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Info (10041): Inferred latch for "s_timeVal[1]" at FSM.vhd(98) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Info (10041): Inferred latch for "s_timeVal[2]" at FSM.vhd(98) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Info (10041): Inferred latch for "s_timeVal[3]" at FSM.vhd(98) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Info (10041): Inferred latch for "s_timeVal[4]" at FSM.vhd(98) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Info (10041): Inferred latch for "s_timeVal[5]" at FSM.vhd(98) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Info (10041): Inferred latch for "s_timeVal[6]" at FSM.vhd(98) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Info (10041): Inferred latch for "s_timeVal[7]" at FSM.vhd(98) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Info (10041): Inferred latch for "s_program[0]" at FSM.vhd(98) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Info (10041): Inferred latch for "s_program[1]" at FSM.vhd(98) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Info (10041): Inferred latch for "s_program[2]" at FSM.vhd(98) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Info (10041): Inferred latch for "s_program[3]" at FSM.vhd(98) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Info (10041): Inferred latch for "nProgramEnd" at FSM.vhd(98) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Info (10041): Inferred latch for "nCycle" at FSM.vhd(98) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Info (10041): Inferred latch for "ison" at FSM.vhd(98) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Info (12129): Elaborating entity "Timer" using architecture "A:behavioral" for hierarchy "Timer:timerAux" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 87
-Info (12129): Elaborating entity "PulseGen" using architecture "A:behavioral" for hierarchy "PulseGen:pulseGenUnit" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 97
-Info (12129): Elaborating entity "display" using architecture "A:behavioral" for hierarchy "display:displayUnit" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 105
-Info (12129): Elaborating entity "bin2bcd" using architecture "A:behavioral" for hierarchy "display:displayUnit|bin2bcd:bin2bcdTime" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Display.vhd Line: 25
-Info (12129): Elaborating entity "bcd7seg" using architecture "A:behavioral" for hierarchy "display:displayUnit|bcd7seg:bcd7segEqual" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Display.vhd Line: 31
+Info (12129): Elaborating entity "registerUnit" using architecture "A:behavioral" for hierarchy "registerUnit:registerBlock" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 41
+Info (12129): Elaborating entity "DebounceUnit" using architecture "A:behavioral" for hierarchy "registerUnit:registerBlock|DebounceUnit:debounceReset" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/registerUnit.vhd Line: 32
+Info (12129): Elaborating entity "FSM" using architecture "A:behavioral" for hierarchy "FSM:FSMUnit" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 57
+Warning (10492): VHDL Process Statement warning at FSM.vhd(96): signal "p1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 96
+Warning (10492): VHDL Process Statement warning at FSM.vhd(96): signal "p2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 96
+Warning (10492): VHDL Process Statement warning at FSM.vhd(96): signal "p3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 96
+Warning (10492): VHDL Process Statement warning at FSM.vhd(99): signal "p1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 99
+Warning (10492): VHDL Process Statement warning at FSM.vhd(99): signal "p2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 99
+Warning (10492): VHDL Process Statement warning at FSM.vhd(99): signal "p3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 99
+Warning (10492): VHDL Process Statement warning at FSM.vhd(102): signal "p1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 102
+Warning (10492): VHDL Process Statement warning at FSM.vhd(102): signal "p2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 102
+Warning (10492): VHDL Process Statement warning at FSM.vhd(102): signal "p3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 102
+Warning (10492): VHDL Process Statement warning at FSM.vhd(110): signal "startstop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 110
+Warning (10492): VHDL Process Statement warning at FSM.vhd(110): signal "door" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 110
+Warning (10492): VHDL Process Statement warning at FSM.vhd(111): signal "s_program" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 111
+Warning (10492): VHDL Process Statement warning at FSM.vhd(114): signal "s_program" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 114
+Warning (10492): VHDL Process Statement warning at FSM.vhd(116): signal "s_program" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 116
+Warning (10492): VHDL Process Statement warning at FSM.vhd(130): signal "timeExp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 130
+Warning (10492): VHDL Process Statement warning at FSM.vhd(142): signal "s_program" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 142
+Warning (10492): VHDL Process Statement warning at FSM.vhd(142): signal "cycle" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 142
+Warning (10492): VHDL Process Statement warning at FSM.vhd(149): signal "timeExp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 149
+Warning (10492): VHDL Process Statement warning at FSM.vhd(160): signal "timeExp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 160
+Warning (10492): VHDL Process Statement warning at FSM.vhd(161): signal "programEnd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 161
+Warning (10492): VHDL Process Statement warning at FSM.vhd(164): signal "cycle" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 164
+Warning (10492): VHDL Process Statement warning at FSM.vhd(164): signal "programEnd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 164
+Warning (10492): VHDL Process Statement warning at FSM.vhd(167): signal "cycle" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 167
+Warning (10492): VHDL Process Statement warning at FSM.vhd(167): signal "programEnd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 167
+Warning (10492): VHDL Process Statement warning at FSM.vhd(184): signal "timeExp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 184
+Warning (10492): VHDL Process Statement warning at FSM.vhd(196): signal "timeExp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 196
+Warning (10631): VHDL Process Statement warning at FSM.vhd(88): inferring latch(es) for signal or variable "nCycle", which holds its previous value in one or more paths through the process File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 88
+Warning (10631): VHDL Process Statement warning at FSM.vhd(88): inferring latch(es) for signal or variable "nProgramEnd", which holds its previous value in one or more paths through the process File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 88
+Warning (10631): VHDL Process Statement warning at FSM.vhd(88): inferring latch(es) for signal or variable "s_program", which holds its previous value in one or more paths through the process File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 88
+Info (10041): Inferred latch for "s_program[0]" at FSM.vhd(88) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 88
+Info (10041): Inferred latch for "s_program[1]" at FSM.vhd(88) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 88
+Info (10041): Inferred latch for "s_program[2]" at FSM.vhd(88) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 88
+Info (10041): Inferred latch for "s_program[3]" at FSM.vhd(88) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 88
+Info (10041): Inferred latch for "nProgramEnd" at FSM.vhd(88) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 88
+Info (10041): Inferred latch for "nCycle" at FSM.vhd(88) File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 88
+Info (12129): Elaborating entity "Timer" using architecture "A:behavioral" for hierarchy "Timer:timerAux" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 76
+Info (12129): Elaborating entity "PulseGen" using architecture "A:behavioral" for hierarchy "PulseGen:pulseGenUnit" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 86
+Info (12129): Elaborating entity "display" using architecture "A:behavioral" for hierarchy "display:displayUnit" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 94
+Info (12129): Elaborating entity "bin2bcd" using architecture "A:behavioral" for hierarchy "display:displayUnit|bin2bcd:bin2bcdTime" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Display.vhd Line: 22
+Info (12129): Elaborating entity "bcd7seg" using architecture "A:behavioral" for hierarchy "display:displayUnit|bcd7seg:bcd7segEqual" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Display.vhd Line: 28
 Info (278001): Inferred 2 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "display:displayUnit|bin2bcd:bin2bcdTime|Mod0" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/bin2bcd.vhd Line: 21
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "display:displayUnit|bin2bcd:bin2bcdTime|Div0" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/bin2bcd.vhd Line: 20
@@ -605,16 +564,11 @@ Info (12133): Instantiated megafunction "display:displayUnit|bin2bcd:bin2bcdTime
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_jhm.tdf
     Info (12023): Found entity 1: lpm_divide_jhm File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/db/lpm_divide_jhm.tdf Line: 25
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "FSM:FSMUnit|s_program[3]" merged with LATCH primitive "FSM:FSMUnit|s_program[2]" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-    Info (13026): Duplicate LATCH primitive "FSM:FSMUnit|s_timeVal[7]" merged with LATCH primitive "FSM:FSMUnit|s_timeVal[6]" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-Warning (13012): Latch FSM:FSMUnit|s_timeVal[4] has unsafe behavior File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FSM:FSMUnit|pState.def File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 32
-Warning (13012): Latch FSM:FSMUnit|s_timeVal[5] has unsafe behavior File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FSM:FSMUnit|pState.def File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 32
-Warning (13012): Latch FSM:FSMUnit|nProgramEnd has unsafe behavior File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 35
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FSM:FSMUnit|pState.spn File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 32
-Warning (13012): Latch FSM:FSMUnit|nCycle has unsafe behavior File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 35
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FSM:FSMUnit|cycle File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 35
+    Info (13026): Duplicate LATCH primitive "FSM:FSMUnit|s_program[3]" merged with LATCH primitive "FSM:FSMUnit|s_program[2]" File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 88
+Warning (13012): Latch FSM:FSMUnit|nProgramEnd has unsafe behavior File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 32
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FSM:FSMUnit|programEnd File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 32
+Warning (13012): Latch FSM:FSMUnit|nCycle has unsafe behavior File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 32
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FSM:FSMUnit|cycle File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 32
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDG[4]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 11
     Warning (13410): Pin "LEDG[5]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 11
@@ -626,27 +580,22 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 13
     Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 13
     Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 13
-    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 14
-    Warning (13410): Pin "HEX2[2]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 14
-    Warning (13410): Pin "HEX2[3]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 14
-    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 15
-    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 15
-    Warning (13410): Pin "HEX6[0]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 18
-    Warning (13410): Pin "HEX6[1]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 18
-    Warning (13410): Pin "HEX6[2]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 18
-    Warning (13410): Pin "HEX6[4]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 18
-    Warning (13410): Pin "HEX6[5]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 18
+    Warning (13410): Pin "HEX6[0]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 16
+    Warning (13410): Pin "HEX6[1]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 16
+    Warning (13410): Pin "HEX6[2]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 16
+    Warning (13410): Pin "HEX6[4]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 16
+    Warning (13410): Pin "HEX6[5]" is stuck at VCC File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/MaqLavar.vhd Line: 16
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 440 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
-    Info (21059): Implemented 62 output pins
-    Info (21061): Implemented 370 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 69 warnings
-    Info: Peak virtual memory: 4806 megabytes
-    Info: Processing ended: Mon Jun 20 01:04:02 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+Info (21057): Implemented 403 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 47 output pins
+    Info (21061): Implemented 349 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 50 warnings
+    Info: Peak virtual memory: 4815 megabytes
+    Info: Processing ended: Sun Jun 19 23:18:48 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:19
 
 

@@ -40,7 +40,7 @@ architecture Behavioral of FSM is
 	--time for each task (BCD)
 
 	constant wInTime  : std_logic_vector(7 downto 0) := "00000101"; --5s
-	constant rnsTime  : std_logic_vector(7 downto 0) := "00001000"; --9s
+	constant rnsTime  : std_logic_vector(7 downto 0) := "00001001"; --9s
 	constant wOutTime : std_logic_vector(7 downto 0) := "00000010"; --2s
 	constant spnTime  : std_logic_vector(7 downto 0) := "00000100"; --4s
 	constant offTime  : std_logic_vector(7 downto 0) := "00000010"; --2s
@@ -151,9 +151,9 @@ begin
 				ison         <= '1';
 				functionLeds <= "0010";
 				s_timeVal    <= rnsTime;
-
+				nProgramEnd <= '0';
 				
-				if (s_program = "0001" and Cycle = '1') then
+				if (s_program = "0001" and cycle = '1') then
 					nCycle  <= '1';
 				else
 					nCycle  <= '0';
@@ -172,27 +172,25 @@ begin
 				s_timeVal    <= wOutTime;
 				
 				if (timeExp = '1') then
-					if (programEnd = '1') then
+					if (programEnd = '1' and cycle ='0') then
 						nprogramEnd <= '0';
 						nState       <= tOff;
-					elsif (cycle = '1' and programEnd = '0') then
+					elsif (cycle = '1') then
 						nCycle  <= '0';
 						nState <= wIn;
-					elsif (cycle = '0' and programEnd = '0') then
-						nProgramEnd  <= '1';
-						nState <= spn;
 					else
-						nState <= wOut;
+						nprogramEnd <= '1';
+						nState <= spn;
 					end if;
 				else
 					nState <= wOut;
 				end if;
 
 			when spn =>
+			
 				ison         <= '1';
 				functionLeds <= "1000";
 				s_timeVal    <= spnTime;
-				nProgramEnd   <= '1';
 				
 				
 				if (timeExp = '1') then
@@ -203,7 +201,7 @@ begin
 				end if;
 
 			when tOff =>
-				ison         <= '0';
+				ison         <= '1';
 				functionLeds <= "0000";
 				s_timeVal    <= offTime;
 				
@@ -226,10 +224,12 @@ begin
 				end if;
 				if (timeExp = '1') then
 					if (s_program = "0001") then
+						nCycle  <= '1';
 						nState <= wIn;
 					elsif (s_program = "0010") then
 						nState <= wIn;
 					elsif (s_program = "0011") then
+						nProgramEnd   <= '1';
 						nState <= spn;
 					else
 						nState <= idle;

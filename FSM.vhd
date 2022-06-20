@@ -11,8 +11,6 @@ entity FSM is
 		p2           : in std_logic;
 		p3           : in std_logic;
 		defSw        : in std_logic;
-		cycleLed		 : out std_logic;
-		programEndLed: out std_logic;
 		timeExp      : in std_logic; --'1' when the current task is done
 		door         : in std_logic; --checks if door is open
 		program      : out std_logic_vector(3 downto 0);

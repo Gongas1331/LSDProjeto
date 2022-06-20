@@ -8,8 +8,7 @@
 \usepackage{hyperref}
 \usepackage{amsmath}
 \usepackage{amssymb}
-
-\begin{document}
+\usepackage{xspace}% used by \sigla
 
 %
 % Tables of contents, of figures, ...
@@ -19,6 +18,8 @@
 \tableofcontents
 
 
+% The chapters (usually written using the isolatin font encoding ...)
+
 \pagenumbering{arabic}
 \chapter{Introdução}
 
@@ -26,21 +27,14 @@
 
 	A máquina permite também observar ao longo do seu funcionamento se esta se encontra a meio de um programa, em que tarefa se encontra, e quanto tempo falta para esta acabar.
 
+\chapter{Manual do Utilizador}
+
+	
 
 \chapter{Arquitetura}
 
- O sistema é constituído por seis entradas: \textbf{CLOCK\_50}, \textbf{KEY0}, \textbf{KEY1}, \textbf{SW0}, \textbf{SW1}, \textbf{SW2}, \textbf{SW3} e \textbf{SW4}. O botão \textbf{KEY0} tem como função reiniciar a máquina de lavar. O botão \textbf{KEY1} serve para começar/parar/retomar o funcionamento dos programas da máquina. Os interruptores \textbf{SW1}, \textbf{SW2}, \textbf{SW3} servem para selecionar os programas 1, 2 e 3, respetivamente. O interruptor SW0 simula a porta da máquina e o interruptor \textbf{SW4} ativa o modo deferido da máquina. 
- 
- O sistema é constituído também por 17 saídas: \textbf{LEDG7}, \textbf{LEDG3}, \textbf{LEDG2}, \textbf{LEDG1}, \textbf{LEDG0}, \textbf{LEDR4}, \textbf{LEDR3}, \textbf{LEDR2}, \textbf{LEDR1}, \textbf{LEDR0}, \textbf{HEX6}, \textbf{HEX5}, \textbf{HEX4}, \textbf{HEX3}, \textbf{HEX2}, \textbf{HEX1} e \textbf{HEX0}. 
- 
- Os leds verdes \textbf{LEDG7}, \textbf{LEDG3}, \textbf{LEDG2}, \textbf{LEDG1}, \textbf{LEDG0} ativam, respetivamente, se a porta da máquina estiver aberta, se a função de spin estiver a ser executada, se a bomba de água estiver ativa, se a máquina estiver a enxaguar, e se a válvula de água. 
- 
- Nos leds vermelhos, \textbf{LEDR4}, \textbf{LEDR3}, \textbf{LEDR2}, \textbf{LEDR1} e \textbf{LEDR0}, o \textbf{LEDR4} ativa quando o modo diferido está ligado, o \textbf{LEDR0} liga enquanto a máquina executa um programa, enquanto os restantes leds vermelhos mostram que programa está selecionado, correspondendo o \textbf{LEDR1} ao programa 1, o \textbf{LEDR2} ao programa 2 e o \textbf{LEDR3} ao programa 3.
- 
- Nos displays hexadecimais textbf{HEX6}, \textbf{HEX5}, \textbf{HEX4}, \textbf{HEX3}, \textbf{HEX2}, \textbf{HEX1} e \textbf{HEX0} pode-se observar o valor do tempo total do programa antes deste ser iniciado, ou o tempo restante para acabar uma tarefa nos displays \textbf{HEX5} e \textbf{HEX4}, o display \textbf{HEX6} mostra um igual(=) quando a máquina está pausada, os displays \textbf{HEX3} e \textbf{HEX2} mostram "dF" enquanto se espera a ativação da máquina no modo diferido, e os displays \textbf{HEX1} e \textbf{HEX0} mostram que programa está selecionado.
- 
- 
-\chapter{Manual do Utilizador}
+O sistema é constituído por seis entradas: CLOCK\_50, KEY0, KEY1, SW0, SW1, SW2, SW3 e SW4. 
+ O botão KEY0 tem como função reiniciar a máquina de lavar. O botão KEY1 serve para começar/parar/retomar o funcionamento dos programas da máquina. Os interruptores SW1, SW2 e SW3 servem para selecionar os programas 1, 2 e 3, respetivamente. O interruptor SW0 simula a porta da máquina e o interruptor SW4 ativa o modo deferido da máquina. 
 
 \chapter{Implementação}
 
@@ -58,12 +52,12 @@ Apresentamos de seguida, uma lista das opções suportadas.
 
 \chapter{Conclusão}
 
-Este projeto foi aquele que nos chamou mais à atenção, sendo que nos pareceu o mais interessante de resolver.
+Este projeto foi aquele que nos chamou mais à atenção, sendo que nos pareceu o mais útil a nível de referência futura.
 
 \chapter{Contribuição}
 
-\textbf{\Large Gonçalo Cunha} :
+\textbf{\Large Gonçalo Cunha} : tudo
 
-\textbf{\Large Anderson Lourenço} :
+\textbf{\Large Anderson Lourenço} : nada
 
 \end{document}

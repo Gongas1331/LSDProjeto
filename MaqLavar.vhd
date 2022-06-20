@@ -81,6 +81,8 @@ begin
 			functionLeds => LEDG(3 downto 0),
 			ledR         => LEDR(0),
 			doorLed      => LEDG(7),
+			cycleLed		 => LEDG(6),
+			programEndLed=> LEDG(5),
 			defOn        => s_defOn,
 			equal        => s_equal);
 
@@ -115,5 +117,5 @@ begin
 			rightDigit   => HEX4,
 			pDisplay     => HEX1,
 			pnDisplay    => HEX0);
-	LEDG(6 downto 4) <= "000";
+	LEDG(4) <= '0';
 end Shell;

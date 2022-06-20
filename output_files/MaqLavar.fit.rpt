@@ -1,5 +1,5 @@
 Fitter report for MaqLavar
-Mon Jun 20 14:48:53 2022
+Mon Jun 20 16:24:09 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon Jun 20 14:48:53 2022       ;
+; Fitter Status                      ; Successful - Mon Jun 20 16:24:09 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; MaqLavar                                    ;
 ; Top-level Entity Name              ; MaqLavar                                    ;
@@ -161,8 +161,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.4%      ;
-;     Processors 3-4         ;   0.4%      ;
+;     Processor 2            ;   0.5%      ;
+;     Processors 3-4         ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -2353,12 +2353,12 @@ Info (176353): Automatically promoted node CLOCK_50~input (placed in PIN Y2 (CLK
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
         Info (176357): Destination node Timer:timerAux|s_cntZero File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/Timer.vhd Line: 23
-        Info (176357): Destination node FSM:FSMUnit|pState.rns File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 32
-        Info (176357): Destination node FSM:FSMUnit|pState.wOut File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 32
-        Info (176357): Destination node FSM:FSMUnit|pState.spn File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 32
-        Info (176357): Destination node FSM:FSMUnit|cycle File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 35
-        Info (176357): Destination node FSM:FSMUnit|programEnd File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 35
-Info (176353): Automatically promoted node FSM:FSMUnit|Selector20~0  File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 100
+        Info (176357): Destination node FSM:FSMUnit|pState.rns File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 34
+        Info (176357): Destination node FSM:FSMUnit|pState.wOut File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 34
+        Info (176357): Destination node FSM:FSMUnit|pState.spn File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 34
+        Info (176357): Destination node FSM:FSMUnit|cycle File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 37
+        Info (176357): Destination node FSM:FSMUnit|programEnd File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 37
+Info (176353): Automatically promoted node FSM:FSMUnit|Selector20~0  File: C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/FSM.vhd Line: 102
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -2826,7 +2826,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.35 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.36 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2835,10 +2835,10 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/output_files/MaqLavar.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 456 warnings
-    Info: Peak virtual memory: 5721 megabytes
-    Info: Processing ended: Mon Jun 20 14:48:54 2022
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Peak virtual memory: 5724 megabytes
+    Info: Processing ended: Mon Jun 20 16:24:09 2022
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:22
 
 
 +----------------------------+

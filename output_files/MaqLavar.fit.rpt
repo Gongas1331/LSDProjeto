@@ -1,5 +1,5 @@
 Fitter report for MaqLavar
-Mon Jun 20 01:04:15 2022
+Mon Jun 20 14:48:53 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon Jun 20 01:04:15 2022       ;
+; Fitter Status                      ; Successful - Mon Jun 20 14:48:53 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; MaqLavar                                    ;
 ; Top-level Entity Name              ; MaqLavar                                    ;
@@ -161,7 +161,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.5%      ;
+;     Processor 2            ;   0.4%      ;
 ;     Processors 3-4         ;   0.4%      ;
 +----------------------------+-------------+
 
@@ -676,8 +676,8 @@ The pin-out file can be found in C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
 ;     -- 4 input functions                    ; 132                     ;
-;     -- 3 input functions                    ; 67                      ;
-;     -- <=2 input functions                  ; 158                     ;
+;     -- 3 input functions                    ; 68                      ;
+;     -- <=2 input functions                  ; 157                     ;
 ;     -- Register only                        ; 5                       ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
@@ -707,10 +707,10 @@ The pin-out file can be found in C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
 ; Average interconnect usage (total/H/V)      ; 0.2% / 0.2% / 0.2%      ;
-; Peak interconnect usage (total/H/V)         ; 3.7% / 3.7% / 3.6%      ;
+; Peak interconnect usage (total/H/V)         ; 3.2% / 3.3% / 3.1%      ;
 ; Maximum fan-out                             ; 103                     ;
 ; Highest non-global fan-out                  ; 26                      ;
-; Total fan-out                               ; 1442                    ;
+; Total fan-out                               ; 1443                    ;
 ; Average fan-out                             ; 2.32                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
@@ -731,8 +731,8 @@ The pin-out file can be found in C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto
 ;                                             ;                        ;                                ;
 ; Logic element usage by number of LUT inputs ;                        ;                                ;
 ;     -- 4 input functions                    ; 132                    ; 0                              ;
-;     -- 3 input functions                    ; 67                     ; 0                              ;
-;     -- <=2 input functions                  ; 158                    ; 0                              ;
+;     -- 3 input functions                    ; 68                     ; 0                              ;
+;     -- <=2 input functions                  ; 157                    ; 0                              ;
 ;     -- Register only                        ; 5                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic elements by mode                      ;                        ;                                ;
@@ -759,8 +759,8 @@ The pin-out file can be found in C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto
 ;     -- Registered Output Connections        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Internal Connections                        ;                        ;                                ;
-;     -- Total Connections                    ; 1437                   ; 5                              ;
-;     -- Registered Connections               ; 496                    ; 0                              ;
+;     -- Total Connections                    ; 1438                   ; 5                              ;
+;     -- Registered Connections               ; 497                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; External Connections                        ;                        ;                                ;
 ;     -- Top                                  ; 0                      ; 0                              ;
@@ -1782,10 +1782,10 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                                               ; Entity Name         ; Library Name ;
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |MaqLavar                                    ; 362 (4)     ; 109 (4)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 70   ; 0            ; 253 (0)      ; 5 (1)             ; 104 (0)          ; |MaqLavar                                                                                                                                         ; MaqLavar            ; work         ;
-;    |FSM:FSMUnit|                             ; 68 (68)     ; 12 (12)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 48 (48)      ; 1 (1)             ; 19 (19)          ; |MaqLavar|FSM:FSMUnit                                                                                                                             ; FSM                 ; work         ;
+; |MaqLavar                                    ; 362 (4)     ; 109 (4)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 70   ; 0            ; 253 (0)      ; 5 (0)             ; 104 (0)          ; |MaqLavar                                                                                                                                         ; MaqLavar            ; work         ;
+;    |FSM:FSMUnit|                             ; 71 (71)     ; 12 (12)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 51 (51)      ; 4 (4)             ; 16 (16)          ; |MaqLavar|FSM:FSMUnit                                                                                                                             ; FSM                 ; work         ;
 ;    |PulseGen:pulseGenUnit|                   ; 37 (37)     ; 27 (27)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 27 (27)          ; |MaqLavar|PulseGen:pulseGenUnit                                                                                                                   ; PulseGen            ; work         ;
-;    |Timer:timerAux|                          ; 23 (23)     ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (14)      ; 1 (1)             ; 8 (8)            ; |MaqLavar|Timer:timerAux                                                                                                                          ; Timer               ; work         ;
+;    |Timer:timerAux|                          ; 22 (22)     ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 9 (9)            ; |MaqLavar|Timer:timerAux                                                                                                                          ; Timer               ; work         ;
 ;    |display:displayUnit|                     ; 94 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 94 (0)       ; 0 (0)             ; 0 (0)            ; |MaqLavar|display:displayUnit                                                                                                                     ; display             ; work         ;
 ;       |bcd7seg:bcd7segProgram|               ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |MaqLavar|display:displayUnit|bcd7seg:bcd7segProgram                                                                                              ; bcd7seg             ; work         ;
 ;       |bcd7seg:bcd7segTimeL|                 ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |MaqLavar|display:displayUnit|bcd7seg:bcd7segTimeL                                                                                                ; bcd7seg             ; work         ;
@@ -1799,9 +1799,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;             |lpm_divide_m9m:auto_generated|  ; 33 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 33 (0)       ; 0 (0)             ; 0 (0)            ; |MaqLavar|display:displayUnit|bin2bcd:bin2bcdTime|lpm_divide:Mod0|lpm_divide_m9m:auto_generated                                                   ; lpm_divide_m9m      ; work         ;
 ;                |sign_div_unsign_bkh:divider| ; 33 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 33 (0)       ; 0 (0)             ; 0 (0)            ; |MaqLavar|display:displayUnit|bin2bcd:bin2bcdTime|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh ; work         ;
 ;                   |alt_u_div_a4f:divider|    ; 33 (33)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 33 (33)      ; 0 (0)             ; 0 (0)            ; |MaqLavar|display:displayUnit|bin2bcd:bin2bcdTime|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f       ; work         ;
-;    |registerUnit:registerBlock|              ; 144 (5)     ; 57 (5)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 87 (0)       ; 2 (0)             ; 55 (5)           ; |MaqLavar|registerUnit:registerBlock                                                                                                              ; registerUnit        ; work         ;
-;       |DebounceUnit:debounceReset|           ; 69 (69)     ; 26 (26)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 43 (43)      ; 1 (1)             ; 25 (25)          ; |MaqLavar|registerUnit:registerBlock|DebounceUnit:debounceReset                                                                                   ; DebounceUnit        ; work         ;
-;       |DebounceUnit:debounceStartStop|       ; 70 (70)     ; 26 (26)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 44 (44)      ; 1 (1)             ; 25 (25)          ; |MaqLavar|registerUnit:registerBlock|DebounceUnit:debounceStartStop                                                                               ; DebounceUnit        ; work         ;
+;    |registerUnit:registerBlock|              ; 142 (5)     ; 57 (5)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 85 (0)       ; 1 (1)             ; 56 (4)           ; |MaqLavar|registerUnit:registerBlock                                                                                                              ; registerUnit        ; work         ;
+;       |DebounceUnit:debounceReset|           ; 68 (68)     ; 26 (26)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 42 (42)      ; 0 (0)             ; 26 (26)          ; |MaqLavar|registerUnit:registerBlock|DebounceUnit:debounceReset                                                                                   ; DebounceUnit        ; work         ;
+;       |DebounceUnit:debounceStartStop|       ; 69 (69)     ; 26 (26)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 43 (43)      ; 0 (0)             ; 26 (26)          ; |MaqLavar|registerUnit:registerBlock|DebounceUnit:debounceStartStop                                                                               ; DebounceUnit        ; work         ;
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1914,16 +1914,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 ; CLOCK_50                                                                      ; PIN_Y2             ; 7       ; Clock                     ; no     ; --                   ; --               ; --                        ;
 ; CLOCK_50                                                                      ; PIN_Y2             ; 103     ; Clock                     ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; FSM:FSMUnit|Selector20~0                                                      ; LCCOMB_X86_Y33_N24 ; 7       ; Latch enable              ; yes    ; Global Clock         ; GCLK9            ; --                        ;
-; FSM:FSMUnit|Selector22~1                                                      ; LCCOMB_X87_Y33_N28 ; 1       ; Latch enable              ; no     ; --                   ; --               ; --                        ;
-; FSM:FSMUnit|Selector23~0                                                      ; LCCOMB_X87_Y33_N6  ; 1       ; Latch enable              ; no     ; --                   ; --               ; --                        ;
-; FSM:FSMUnit|pState.def                                                        ; FF_X86_Y33_N19     ; 10      ; Latch enable              ; no     ; --                   ; --               ; --                        ;
-; FSM:FSMUnit|pState.idle                                                       ; FF_X88_Y33_N21     ; 16      ; Latch enable              ; no     ; --                   ; --               ; --                        ;
-; PulseGen:pulseGenUnit|s_counter[13]~28                                        ; LCCOMB_X81_Y30_N16 ; 26      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; Timer:timerAux|s_counter[5]~1                                                 ; LCCOMB_X81_Y33_N26 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; registerUnit:registerBlock|DebounceUnit:debounceReset|s_debounceCnt[2]~3      ; LCCOMB_X80_Y31_N0  ; 22      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; registerUnit:registerBlock|DebounceUnit:debounceReset|s_pulsedOut             ; FF_X80_Y31_N17     ; 24      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
-; registerUnit:registerBlock|DebounceUnit:debounceStartStop|s_debounceCnt[17]~2 ; LCCOMB_X73_Y36_N4  ; 22      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; FSM:FSMUnit|Selector20~0                                                      ; LCCOMB_X97_Y37_N12 ; 7       ; Latch enable              ; yes    ; Global Clock         ; GCLK5            ; --                        ;
+; FSM:FSMUnit|Selector22~1                                                      ; LCCOMB_X95_Y37_N18 ; 1       ; Latch enable              ; no     ; --                   ; --               ; --                        ;
+; FSM:FSMUnit|Selector23~0                                                      ; LCCOMB_X94_Y37_N24 ; 1       ; Latch enable              ; no     ; --                   ; --               ; --                        ;
+; FSM:FSMUnit|pState.def                                                        ; FF_X97_Y37_N15     ; 10      ; Latch enable              ; no     ; --                   ; --               ; --                        ;
+; FSM:FSMUnit|pState.idle                                                       ; FF_X96_Y37_N1      ; 16      ; Latch enable              ; no     ; --                   ; --               ; --                        ;
+; PulseGen:pulseGenUnit|s_counter[13]~28                                        ; LCCOMB_X96_Y34_N28 ; 26      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; Timer:timerAux|s_counter[5]~1                                                 ; LCCOMB_X91_Y37_N6  ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; registerUnit:registerBlock|DebounceUnit:debounceReset|s_debounceCnt[2]~3      ; LCCOMB_X102_Y38_N6 ; 22      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; registerUnit:registerBlock|DebounceUnit:debounceReset|s_pulsedOut             ; FF_X102_Y38_N25    ; 24      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
+; registerUnit:registerBlock|DebounceUnit:debounceStartStop|s_debounceCnt[17]~2 ; LCCOMB_X97_Y47_N30 ; 22      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
 +-------------------------------------------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1932,8 +1932,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                     ; Location           ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; CLOCK_50                 ; PIN_Y2             ; 103     ; 17                                   ; Global Clock         ; GCLK4            ; --                        ;
-; FSM:FSMUnit|Selector20~0 ; LCCOMB_X86_Y33_N24 ; 7       ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
+; CLOCK_50                 ; PIN_Y2             ; 103     ; 6                                    ; Global Clock         ; GCLK4            ; --                        ;
+; FSM:FSMUnit|Selector20~0 ; LCCOMB_X97_Y37_N12 ; 7       ; 0                                    ; Global Clock         ; GCLK5            ; --                        ;
 +--------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1942,14 +1942,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 468 / 342,891 ( < 1 % ) ;
-; C16 interconnects     ; 52 / 10,120 ( < 1 % )   ;
-; C4 interconnects      ; 364 / 209,544 ( < 1 % ) ;
-; Direct links          ; 124 / 342,891 ( < 1 % ) ;
+; Block interconnects   ; 477 / 342,891 ( < 1 % ) ;
+; C16 interconnects     ; 57 / 10,120 ( < 1 % )   ;
+; C4 interconnects      ; 303 / 209,544 ( < 1 % ) ;
+; Direct links          ; 163 / 342,891 ( < 1 % ) ;
 ; Global clocks         ; 2 / 20 ( 10 % )         ;
-; Local interconnects   ; 177 / 119,088 ( < 1 % ) ;
-; R24 interconnects     ; 52 / 9,963 ( < 1 % )    ;
-; R4 interconnects      ; 322 / 289,782 ( < 1 % ) ;
+; Local interconnects   ; 173 / 119,088 ( < 1 % ) ;
+; R24 interconnects     ; 56 / 9,963 ( < 1 % )    ;
+; R4 interconnects      ; 292 / 289,782 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
@@ -1958,34 +1958,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+------------------------------+
 ; Number of Logic Elements  (Average = 12.07) ; Number of LABs  (Total = 30) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 1                            ;
+; 1                                           ; 3                            ;
 ; 2                                           ; 0                            ;
 ; 3                                           ; 0                            ;
-; 4                                           ; 1                            ;
-; 5                                           ; 1                            ;
+; 4                                           ; 0                            ;
+; 5                                           ; 2                            ;
 ; 6                                           ; 1                            ;
-; 7                                           ; 4                            ;
+; 7                                           ; 2                            ;
 ; 8                                           ; 0                            ;
-; 9                                           ; 2                            ;
+; 9                                           ; 0                            ;
 ; 10                                          ; 0                            ;
 ; 11                                          ; 1                            ;
-; 12                                          ; 0                            ;
-; 13                                          ; 2                            ;
-; 14                                          ; 2                            ;
-; 15                                          ; 5                            ;
-; 16                                          ; 10                           ;
+; 12                                          ; 3                            ;
+; 13                                          ; 1                            ;
+; 14                                          ; 1                            ;
+; 15                                          ; 1                            ;
+; 16                                          ; 15                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.03) ; Number of LABs  (Total = 30) ;
+; LAB-wide Signals  (Average = 1.07) ; Number of LABs  (Total = 30) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 20                           ;
-; 1 Clock enable                     ; 7                            ;
-; 1 Sync. clear                      ; 3                            ;
+; 1 Clock                            ; 19                           ;
+; 1 Clock enable                     ; 8                            ;
+; 1 Sync. clear                      ; 2                            ;
 ; 2 Clock enables                    ; 1                            ;
+; 2 Clocks                           ; 2                            ;
 +------------------------------------+------------------------------+
 
 
@@ -1996,31 +1997,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 1                            ;
-; 2                                            ; 0                            ;
+; 2                                            ; 2                            ;
 ; 3                                            ; 0                            ;
 ; 4                                            ; 1                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 1                            ;
-; 7                                            ; 3                            ;
+; 7                                            ; 2                            ;
 ; 8                                            ; 0                            ;
-; 9                                            ; 2                            ;
+; 9                                            ; 1                            ;
 ; 10                                           ; 0                            ;
-; 11                                           ; 4                            ;
-; 12                                           ; 1                            ;
+; 11                                           ; 2                            ;
+; 12                                           ; 0                            ;
 ; 13                                           ; 1                            ;
 ; 14                                           ; 0                            ;
-; 15                                           ; 2                            ;
-; 16                                           ; 0                            ;
+; 15                                           ; 0                            ;
+; 16                                           ; 5                            ;
 ; 17                                           ; 0                            ;
-; 18                                           ; 3                            ;
-; 19                                           ; 0                            ;
-; 20                                           ; 2                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 1                            ;
-; 23                                           ; 3                            ;
-; 24                                           ; 1                            ;
-; 25                                           ; 0                            ;
-; 26                                           ; 1                            ;
+; 18                                           ; 2                            ;
+; 19                                           ; 2                            ;
+; 20                                           ; 4                            ;
+; 21                                           ; 0                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 2                            ;
+; 25                                           ; 2                            ;
+; 26                                           ; 0                            ;
 ; 27                                           ; 0                            ;
 ; 28                                           ; 0                            ;
 ; 29                                           ; 2                            ;
@@ -2030,59 +2031,62 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 8.27) ; Number of LABs  (Total = 30) ;
+; Number of Signals Sourced Out  (Average = 8.47) ; Number of LABs  (Total = 30) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 1                            ;
-; 2                                               ; 2                            ;
-; 3                                               ; 1                            ;
+; 1                                               ; 3                            ;
+; 2                                               ; 1                            ;
+; 3                                               ; 0                            ;
 ; 4                                               ; 2                            ;
-; 5                                               ; 4                            ;
-; 6                                               ; 2                            ;
-; 7                                               ; 3                            ;
+; 5                                               ; 2                            ;
+; 6                                               ; 1                            ;
+; 7                                               ; 4                            ;
 ; 8                                               ; 1                            ;
-; 9                                               ; 0                            ;
+; 9                                               ; 1                            ;
 ; 10                                              ; 2                            ;
 ; 11                                              ; 4                            ;
-; 12                                              ; 3                            ;
-; 13                                              ; 3                            ;
+; 12                                              ; 5                            ;
+; 13                                              ; 2                            ;
 ; 14                                              ; 1                            ;
 ; 15                                              ; 0                            ;
-; 16                                              ; 0                            ;
-; 17                                              ; 0                            ;
-; 18                                              ; 1                            ;
+; 16                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 11.83) ; Number of LABs  (Total = 30) ;
+; Number of Distinct Inputs  (Average = 12.23) ; Number of LABs  (Total = 30) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 1                            ;
+; 2                                            ; 2                            ;
 ; 3                                            ; 2                            ;
-; 4                                            ; 4                            ;
-; 5                                            ; 1                            ;
+; 4                                            ; 2                            ;
+; 5                                            ; 3                            ;
 ; 6                                            ; 0                            ;
-; 7                                            ; 0                            ;
+; 7                                            ; 1                            ;
 ; 8                                            ; 1                            ;
 ; 9                                            ; 1                            ;
-; 10                                           ; 3                            ;
+; 10                                           ; 1                            ;
 ; 11                                           ; 1                            ;
-; 12                                           ; 2                            ;
-; 13                                           ; 2                            ;
-; 14                                           ; 2                            ;
+; 12                                           ; 3                            ;
+; 13                                           ; 1                            ;
+; 14                                           ; 0                            ;
 ; 15                                           ; 1                            ;
-; 16                                           ; 1                            ;
+; 16                                           ; 2                            ;
 ; 17                                           ; 1                            ;
-; 18                                           ; 1                            ;
+; 18                                           ; 0                            ;
 ; 19                                           ; 1                            ;
 ; 20                                           ; 2                            ;
 ; 21                                           ; 2                            ;
 ; 22                                           ; 0                            ;
 ; 23                                           ; 1                            ;
+; 24                                           ; 1                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -2261,14 +2265,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------+---------------------------------------------------------+-------------------+
 ; Source Clock(s)                  ; Destination Clock(s)                                    ; Delay Added in ns ;
 +----------------------------------+---------------------------------------------------------+-------------------+
-; CLOCK_50                         ; CLOCK_50                                                ; 27.6              ;
-; CLOCK_50                         ; FSM:FSMUnit|pState.def                                  ; 21.7              ;
-; FSM:FSMUnit|pState.idle          ; CLOCK_50                                                ; 18.3              ;
-; CLOCK_50,FSM:FSMUnit|pState.idle ; CLOCK_50                                                ; 7.8               ;
-; CLOCK_50,FSM:FSMUnit|pState.idle ; FSM:FSMUnit|pState.def                                  ; 3.7               ;
-; FSM:FSMUnit|pState.idle          ; CLOCK_50,FSM:FSMUnit|pState.def                         ; 3.0               ;
-; FSM:FSMUnit|pState.idle          ; CLOCK_50,FSM:FSMUnit|pState.def,FSM:FSMUnit|pState.idle ; 1.8               ;
-; FSM:FSMUnit|pState.idle          ; FSM:FSMUnit|pState.def                                  ; 1.8               ;
+; CLOCK_50                         ; CLOCK_50                                                ; 25.0              ;
+; CLOCK_50                         ; FSM:FSMUnit|pState.def                                  ; 17.9              ;
+; FSM:FSMUnit|pState.idle          ; CLOCK_50                                                ; 15.8              ;
+; CLOCK_50,FSM:FSMUnit|pState.idle ; CLOCK_50                                                ; 7.6               ;
+; CLOCK_50,FSM:FSMUnit|pState.idle ; FSM:FSMUnit|pState.def                                  ; 3.2               ;
+; FSM:FSMUnit|pState.idle          ; CLOCK_50,FSM:FSMUnit|pState.def                         ; 2.7               ;
+; FSM:FSMUnit|pState.idle          ; CLOCK_50,FSM:FSMUnit|pState.idle                        ; 2.0               ;
+; FSM:FSMUnit|pState.idle          ; CLOCK_50,FSM:FSMUnit|pState.def,FSM:FSMUnit|pState.idle ; 1.7               ;
+; FSM:FSMUnit|pState.idle          ; FSM:FSMUnit|pState.def                                  ; 1.5               ;
 +----------------------------------+---------------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -2279,31 +2284,36 @@ This will disable optimization of problematic paths and expose them for further 
 +-----------------------------------------------------------------------+--------------------------+-------------------+
 ; Source Register                                                       ; Destination Register     ; Delay Added in ns ;
 +-----------------------------------------------------------------------+--------------------------+-------------------+
-; FSM:FSMUnit|pState.def                                                ; FSM:FSMUnit|s_timeVal[5] ; 4.808             ;
-; FSM:FSMUnit|pState.idle                                               ; FSM:FSMUnit|s_timeVal[3] ; 4.046             ;
-; FSM:FSMUnit|s_program[0]                                              ; FSM:FSMUnit|s_timeVal[5] ; 3.704             ;
-; FSM:FSMUnit|s_program[1]                                              ; FSM:FSMUnit|s_timeVal[4] ; 3.629             ;
-; FSM:FSMUnit|s_program[2]                                              ; FSM:FSMUnit|s_timeVal[5] ; 3.541             ;
-; FSM:FSMUnit|nCycle                                                    ; FSM:FSMUnit|cycle        ; 2.854             ;
-; FSM:FSMUnit|nProgramEnd                                               ; FSM:FSMUnit|programEnd   ; 2.830             ;
-; registerUnit:registerBlock|DebounceUnit:debounceStartStop|s_pulsedOut ; FSM:FSMUnit|pState.spn   ; 2.769             ;
-; registerUnit:registerBlock|door_out                                   ; FSM:FSMUnit|pState.spn   ; 2.769             ;
-; registerUnit:registerBlock|def_out                                    ; FSM:FSMUnit|pState.spn   ; 2.769             ;
-; registerUnit:registerBlock|p1_out                                     ; FSM:FSMUnit|s_timeVal[5] ; 2.759             ;
-; registerUnit:registerBlock|p3_out                                     ; FSM:FSMUnit|s_timeVal[5] ; 2.759             ;
-; registerUnit:registerBlock|p2_out                                     ; FSM:FSMUnit|s_timeVal[5] ; 2.759             ;
-; Timer:timerAux|s_cntZero                                              ; FSM:FSMUnit|pState.spn   ; 2.252             ;
-; FSM:FSMUnit|pState.tOff                                               ; FSM:FSMUnit|diffState    ; 1.872             ;
-; FSM:FSMUnit|s_timeEn                                                  ; FSM:FSMUnit|s_timeEn     ; 1.785             ;
-; FSM:FSMUnit|pState.wIn                                                ; FSM:FSMUnit|diffState    ; 1.735             ;
-; FSM:FSMUnit|pState.rns                                                ; FSM:FSMUnit|diffState    ; 1.735             ;
-; FSM:FSMUnit|cycle                                                     ; FSM:FSMUnit|pState.spn   ; 1.573             ;
-; FSM:FSMUnit|pState.wOut                                               ; FSM:FSMUnit|pState.spn   ; 1.573             ;
-; FSM:FSMUnit|programEnd                                                ; FSM:FSMUnit|pState.spn   ; 1.573             ;
-; FSM:FSMUnit|pState.spn                                                ; FSM:FSMUnit|pState.spn   ; 1.573             ;
-; registerUnit:registerBlock|DebounceUnit:debounceReset|s_pulsedOut     ; FSM:FSMUnit|pState.def   ; 1.319             ;
+; FSM:FSMUnit|pState.def                                                ; FSM:FSMUnit|s_timeVal[4] ; 4.158             ;
+; FSM:FSMUnit|pState.idle                                               ; FSM:FSMUnit|s_timeEn     ; 3.794             ;
+; FSM:FSMUnit|s_program[1]                                              ; FSM:FSMUnit|pState.spn   ; 3.747             ;
+; FSM:FSMUnit|s_program[0]                                              ; FSM:FSMUnit|pState.spn   ; 3.742             ;
+; FSM:FSMUnit|s_program[2]                                              ; FSM:FSMUnit|pState.spn   ; 3.562             ;
+; registerUnit:registerBlock|DebounceUnit:debounceStartStop|s_pulsedOut ; FSM:FSMUnit|pState.spn   ; 3.009             ;
+; registerUnit:registerBlock|door_out                                   ; FSM:FSMUnit|pState.spn   ; 3.009             ;
+; registerUnit:registerBlock|def_out                                    ; FSM:FSMUnit|pState.spn   ; 3.009             ;
+; registerUnit:registerBlock|p1_out                                     ; FSM:FSMUnit|s_timeVal[5] ; 2.545             ;
+; registerUnit:registerBlock|p3_out                                     ; FSM:FSMUnit|s_timeVal[5] ; 2.545             ;
+; registerUnit:registerBlock|p2_out                                     ; FSM:FSMUnit|s_timeVal[5] ; 2.545             ;
+; Timer:timerAux|s_cntZero                                              ; FSM:FSMUnit|pState.spn   ; 2.482             ;
+; FSM:FSMUnit|nCycle                                                    ; FSM:FSMUnit|cycle        ; 2.261             ;
+; FSM:FSMUnit|nProgramEnd                                               ; FSM:FSMUnit|programEnd   ; 2.254             ;
+; FSM:FSMUnit|pState.tOff                                               ; FSM:FSMUnit|s_timeEn     ; 1.747             ;
+; FSM:FSMUnit|s_timeEn                                                  ; FSM:FSMUnit|s_timeEn     ; 1.747             ;
+; FSM:FSMUnit|pState.wIn                                                ; FSM:FSMUnit|diffState    ; 1.745             ;
+; FSM:FSMUnit|pState.rns                                                ; FSM:FSMUnit|diffState    ; 1.745             ;
+; FSM:FSMUnit|cycle                                                     ; FSM:FSMUnit|pState.spn   ; 1.589             ;
+; FSM:FSMUnit|pState.wOut                                               ; FSM:FSMUnit|pState.spn   ; 1.589             ;
+; FSM:FSMUnit|programEnd                                                ; FSM:FSMUnit|pState.spn   ; 1.589             ;
+; FSM:FSMUnit|pState.spn                                                ; FSM:FSMUnit|pState.spn   ; 1.589             ;
+; registerUnit:registerBlock|DebounceUnit:debounceReset|s_pulsedOut     ; FSM:FSMUnit|pState.def   ; 1.000             ;
+; Timer:timerAux|s_counter[2]                                           ; Timer:timerAux|s_cntZero ; 0.143             ;
+; Timer:timerAux|s_counter[1]                                           ; Timer:timerAux|s_cntZero ; 0.143             ;
+; Timer:timerAux|s_counter[0]                                           ; Timer:timerAux|s_cntZero ; 0.143             ;
+; Timer:timerAux|s_counter[3]                                           ; Timer:timerAux|s_cntZero ; 0.143             ;
+; FSM:FSMUnit|diffState                                                 ; Timer:timerAux|s_cntZero ; 0.134             ;
 +-----------------------------------------------------------------------+--------------------------+-------------------+
-Note: This table only shows the top 23 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 28 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2812,11 +2822,11 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:04
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X81_Y24 to location X91_Y36
+    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X92_Y37 to location X103_Y48
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.34 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
+Info (11888): Total time spent on timing analysis during the Fitter is 0.35 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2825,10 +2835,10 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/gonga/Downloads/UA/Sem2/LSD/LSDProjeto/output_files/MaqLavar.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 456 warnings
-    Info: Peak virtual memory: 5711 megabytes
-    Info: Processing ended: Mon Jun 20 01:04:15 2022
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 5721 megabytes
+    Info: Processing ended: Mon Jun 20 14:48:54 2022
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +----------------------------+

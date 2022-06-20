@@ -22,7 +22,7 @@ end MaqLavar;
 architecture Shell of MaqLavar is
 
 	signal s_startstop, s_reset, s_pulse, s_p1, s_p2, s_p3, s_door, s_def, s_timeEn, s_running, s_timeExp, s_newTime : std_logic;
-	signal s_program, s_equal                                                                                 		  : std_logic_vector(3 downto 0);
+	signal s_program, s_equal                                                                                        : std_logic_vector(3 downto 0);
 	signal s_timeReal, s_timeVal, s_defOn                                                                            : std_logic_vector(7 downto 0);
 
 begin
@@ -52,14 +52,14 @@ begin
 			p1_in         => SW(1),
 			p2_in         => SW(2),
 			p3_in         => SW(3),
-			def_in		  => SW(4),
+			def_in        => SW(4),
 			reset_in      => KEY(0),
 			startstop_in  => KEY(1),
 			door_out      => s_door,
 			p1_out        => s_p1,
 			p2_out        => s_p2,
 			p3_out        => s_p3,
-			def_out		  => s_def,
+			def_out       => s_def,
 			reset_out     => s_reset,
 			startstop_out => s_startstop);
 
@@ -70,7 +70,7 @@ begin
 			p1           => s_p1,
 			p2           => s_p2,
 			p3           => s_p3,
-			defSw			 => s_def,
+			defSw        => s_def,
 			reset        => s_reset,
 			timeExp      => s_timeExp,
 			door         => s_door,
@@ -81,7 +81,7 @@ begin
 			functionLeds => LEDG(3 downto 0),
 			ledR         => LEDR(0),
 			doorLed      => LEDG(7),
-			defOn		 	 => s_defOn,
+			defOn        => s_defOn,
 			equal        => s_equal);
 
 	timerAux : entity work.Timer(Behavioral)
@@ -106,7 +106,7 @@ begin
 		port map(
 			timeReal     => s_timeReal,
 			equal        => s_equal,
-			defOn			 => s_defOn,
+			defOn        => s_defOn,
 			equalDisplay => HEX6,
 			defDisplay1  => HEX2,
 			defDisplay2  => HEX3,
